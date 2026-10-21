@@ -442,6 +442,12 @@
         .timer-action-btn.btn-primary {
             background-color: var(--primary); color: #fff; border-color: var(--primary);
         }
+        .timer-action-btn.btn-whatsapp {
+            background-color: #25D366; color: #fff; border-color: #25D366; font-weight: 700;
+        }
+        .timer-action-btn.btn-whatsapp:hover {
+            background-color: #1ebe5d; border-color: #1ebe5d;
+        }
         .timer-completed-box {
             display: none; text-align: center; padding: 2rem 1rem; animation: fadeIn 0.4s ease;
         }
@@ -737,7 +743,8 @@
                 <div class="timer-actions-bar">
                     <button type="button" class="timer-action-btn" id="btn-fs"><i class="fa-solid fa-expand"></i> Fullscreen</button>
                     <button type="button" class="timer-action-btn" id="btn-sound"><i class="fa-solid fa-bell"></i> Play Chime</button>
-                    <button type="button" class="timer-action-btn btn-primary" id="btn-share"><i class="fa-solid fa-share-nodes"></i> Share Countdown</button>
+                    <button type="button" class="timer-action-btn btn-whatsapp" id="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Share on WhatsApp</button>
+                    <button type="button" class="timer-action-btn btn-primary" id="btn-share"><i class="fa-solid fa-link"></i> Copy Link</button>
                 </div>
             </section>
 
@@ -1431,6 +1438,16 @@
             const btnS = document.getElementById("btn-sound");
             if (btnS) {
                 btnS.onclick = () => { playChime(); showToast("Played victory chime!"); };
+            }
+            const btnWa = document.getElementById("btn-whatsapp");
+            if (btnWa) {
+                btnWa.onclick = () => {
+                    const tool = TOOLS_REGISTRY.find(t => t.id === activeToolId);
+                    const title = tool ? tool.name : "Live Countdown";
+                    const url = window.location.origin + window.location.pathname + "#" + activeToolId;
+                    const text = encodeURIComponent(`*${title}* ka live countdown dekhein!\nBilkul accurate aur real-time timer yahan check karein:\n${url}`);
+                    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+                };
             }
             const btnSh = document.getElementById("btn-share");
             if (btnSh) {
