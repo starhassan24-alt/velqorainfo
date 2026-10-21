@@ -1,61 +1,3 @@
-Conversation Log
-help
-
-Hello! I'm Antigravity, your AI pair programmer. Here is how I can help you:
-
-What I Can Do
-Code & Build: Write, edit, debug, and refactor code across Python, JavaScript/TypeScript, Go, Rust, C++, and many other languages.
-Project Setup: Bootstrap new projects, create directory structures, configure build tools, and install dependencies.
-Run Tasks & Commands: Execute terminal commands, run test suites, linting, build pipelines, and scripts.
-Research & Search: Search your codebase, inspect files, and search the web for documentation or troubleshooting.
-Automation & Agents: Set up scheduled jobs, multi-agent workflows, and custom plugins or skills.
-Useful Slash Commands
-Command	Purpose
-/plan	Interactively create a step-by-step implementation plan before coding.
-/goal	Autonomous execution mode for long-running or overnight tasks.
-/schedule	Set up recurring tasks or timers.
-/browser	Browse web pages and interact with web applications.
-/compact	Compress conversation context when the chat history gets long.
-/plugin	Discover, enable, or create plugins and skills.
-How to Get Started
-
-You can tell me what you'd like to work on, for example:
-
-"Create a simple REST API in FastAPI"
-"Help me debug an error in my script"
-"Explain how to configure an MCP server or plugin"
-"Review my code or run tests"
-
-What would you like to work on today?
-
-meri is site https://velqorainfo.vercel.app/ per about mai kuch line ap likha do or contact mai meri gmail dhal do misterjojo215@gmail.com 
-
-Aapki site ka main code C:\Users\intel\Desktop\index.html me update kar diya gaya hai.
-
-Key Updates:
-1. About Page Content (Velqora Info)
-
-About section me ye professional aur comprehensive details shamil kar di gayi hain:
-
-Welcome & Mission: Velqora Info ka maqsad accurate, distraction-free aur 100% private time-tracking tools faraham karna hai.
-16 Precision Countdown Tools: Islamic events (Ramadan, Eid, Hajj), Daily/Weekly sprints (Weekend, Daily Reset, Payday, Exams), aur Life/Milestone calculators.
-Privacy & Speed: Zero server lag, no data collection, aur dark/light theme support.
-Dual Timezones: Asia/Karachi (PKT) aur user ke device local time ke sath automatic synchronization.
-2. Contact Page (misterjojo215@gmail.com)
-
-Contact section me aapka email add kar diya gaya hai:
-
-Official Email Card: misterjojo215@gmail.com direct clickable link ke sath (mailto:misterjojo215@gmail.com).
-Feedback / Contact Form: Users directly name, email aur message submit kar sakte hain.
-3. Navigation Fix
-Pehle header menu me "About" aur "Contact" par click karne se page trigger nahi ho raha tha. Ab header aur footer dono jagah se "About" aur "Contact" smoothly open ho rahe hain.
-File Location:
-Updated File: index.html
-Live Website par Update Kaise Karein:
-
-Aapne jahan se bhi apni site Vercel par deploy ki hui hai (GitHub repository ya Vercel dashboard me drag & drop), wahan is updated index.html file ko upload/push kar dein, aur aapki live website velqorainfo.vercel.app
- par ye changes live ho jayenge.
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -63,7 +5,7 @@ Aapne jahan se bhi apni site Vercel par deploy ki hui hai (GitHub repository ya 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChronoTimer Hub | 16 Precision Countdown Tools & Time Calculators</title>
     <meta name="description" content="16 in 1 Precision Countdown Tools: New Year, Ramadan, Eid, Hajj, Birthday, Weekend, Life Calculator, Payday, and Custom Timers. Optimized for Asia/Karachi timezone.">
-    
+    <meta name="google-site-verification" content="IRHRfLiihyHKPN-Lox4a3GaeW7s5J2oLbB11uaEJkJ8" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +13,7 @@ Aapne jahan se bhi apni site Vercel par deploy ki hui hai (GitHub repository ya 
     
     <!-- FontAwesome 6 Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         /* ==========================================================================
            Core CSS Variables & Theme Palettes
@@ -78,6 +21,7 @@ Aapne jahan se bhi apni site Vercel par deploy ki hui hai (GitHub repository ya 
         :root {
             --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
             --font-mono: 'JetBrains Mono', Consolas, monospace;
+
             /* Light Theme */
             --bg-base: #f8fafc;
             --bg-surface: #ffffff;
@@ -85,10 +29,1471 @@ Aapne jahan se bhi apni site Vercel par deploy ki hui hai (GitHub repository ya 
             --bg-subtle: #f1f5f9;
             --border-color: #e2e8f0;
             --border-subtle: #cbd5e1;
+
             --text-primary: #0f172a;
             --text-secondary: #475569;
             --text-muted: #64748b;
+
             --primary: #2563eb;
             --primary-hover: #1d4ed8;
             --primary-light: #eff6ff;
             --primary-focus: rgba(37, 99, 235, 0.25);
+
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-purple: #8b5cf6;
+            --accent-rose: #f43f5e;
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-pill: 9999px;
+
+            --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-max: 1200px;
+        }
+
+        [data-theme="dark"] {
+            --bg-base: #090d16;
+            --bg-surface: #111827;
+            --bg-surface-elevated: #1a2234;
+            --bg-subtle: #1e293b;
+            --border-color: #27354a;
+            --border-subtle: #334155;
+
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+
+            --primary: #3b82f6;
+            --primary-hover: #60a5fa;
+            --primary-light: rgba(59, 130, 246, 0.15);
+            --primary-focus: rgba(59, 130, 246, 0.4);
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+        a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+        a:hover { color: var(--primary-hover); }
+        button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        [data-theme="dark"] .site-header {
+            background-color: rgba(17, 24, 39, 0.9);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        .brand-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--primary), #6366f1);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+        .brand-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-pill);
+            margin-left: 0.4rem;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .theme-toggle-btn, .mobile-toggle-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+        .theme-toggle-btn:hover, .mobile-toggle-btn:hover {
+            background-color: var(--border-color);
+        }
+        .mobile-toggle-btn { display: none; }
+
+        /* Views management */
+        .app-view { display: none; animation: fadeIn 0.3s ease; }
+        .app-view.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero */
+        .hero-section {
+            padding: 3.5rem 0 2rem;
+            text-align: center;
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 1.75rem;
+        }
+        .tz-badge-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .tz-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.88rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .tz-pulse {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-emerald);
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* Search & Filters */
+        .search-wrapper { max-width: 640px; margin: 0 auto; position: relative; }
+        .search-input-box { position: relative; width: 100%; }
+        .search-input-box i.search-icon {
+            position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%);
+            color: var(--text-muted); font-size: 1.15rem; pointer-events: none;
+        }
+        .search-input {
+            width: 100%; height: 56px; padding: 0 3.5rem 0 3.25rem;
+            background-color: var(--bg-surface); border: 2px solid var(--border-color);
+            border-radius: var(--radius-xl); font-size: 1.05rem; color: var(--text-primary);
+            box-shadow: var(--shadow-md); transition: var(--transition);
+        }
+        .search-input:focus {
+            outline: none; border-color: var(--primary);
+            box-shadow: 0 0 0 4px var(--primary-focus), var(--shadow-lg);
+        }
+        .search-clear-btn {
+            position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: var(--text-muted); font-size: 1rem;
+            cursor: pointer; display: none;
+        }
+        .filter-tabs {
+            display: flex; align-items: center; justify-content: center;
+            flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 1rem;
+        }
+        .filter-btn {
+            background: var(--bg-surface); border: 1px solid var(--border-color);
+            color: var(--text-secondary); padding: 0.5rem 1.1rem; border-radius: var(--radius-pill);
+            font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: var(--transition);
+            display: inline-flex; align-items: center; gap: 0.4rem;
+        }
+        .filter-btn:hover { background-color: var(--bg-subtle); color: var(--text-primary); }
+        .filter-btn.active {
+            background-color: var(--primary); color: #fff; border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Tools Grid */
+        .tools-section { padding: 3rem 0 5rem; }
+        .tools-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;
+        }
+        .tool-card {
+            background-color: var(--bg-surface); border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg); padding: 1.5rem; display: flex;
+            flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);
+            transition: var(--transition); cursor: pointer;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--primary);
+        }
+        .tool-card-top {
+            display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem;
+        }
+        .tool-icon-wrapper {
+            width: 48px; height: 48px; border-radius: var(--radius-md);
+            background-color: var(--primary-light); color: var(--primary);
+            display: flex; align-items: center; justify-content: center; font-size: 1.35rem;
+        }
+        .tool-badge {
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);
+            background-color: var(--bg-subtle); color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+        .tool-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+        .tool-desc { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem; }
+        .card-mini-timer {
+            background-color: var(--bg-subtle); border: 1px solid var(--border-color);
+            border-radius: var(--radius-md); padding: 0.6rem 0.75rem;
+            font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600;
+            color: var(--primary); display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .tool-card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 0.75rem; border-top: 1px solid var(--border-color);
+        }
+        .tool-category-label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); }
+        .tool-action-btn {
+            font-size: 0.85rem; font-weight: 700; color: var(--primary);
+            display: inline-flex; align-items: center; gap: 0.35rem;
+        }
+
+        /* Full Tool View Stage */
+        .tool-stage-wrapper { padding: 2.5rem 0 4rem; }
+        .back-nav-bar {
+            display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
+        }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--bg-surface); border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 600;
+            font-size: 0.9rem; cursor: pointer; color: var(--text-primary); transition: var(--transition);
+        }
+        .back-btn:hover { background: var(--bg-subtle); color: var(--primary); }
+
+        .timer-stage {
+            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);
+            border: 1px solid var(--border-color); border-radius: var(--radius-xl);
+            padding: 2.5rem 2rem; box-shadow: var(--shadow-xl); margin-bottom: 2rem;
+            position: relative; overflow: hidden;
+        }
+        .timer-target-info {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+            gap: 1rem; padding-bottom: 1.5rem; margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .target-badge { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; }
+        .target-date-highlight { color: var(--primary); font-weight: 700; }
+        .timezone-dropdown {
+            background-color: var(--bg-subtle); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 0.4rem 0.8rem; border-radius: var(--radius-md);
+            font-weight: 600; font-size: 0.85rem; cursor: pointer;
+        }
+        .countdown-digits-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 1.5rem 0 2rem;
+        }
+        .digit-card {
+            background: var(--bg-base); border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg); padding: 1.75rem 1rem; text-align: center;
+            box-shadow: var(--shadow-md); transition: var(--transition);
+        }
+        .digit-number {
+            font-family: var(--font-mono); font-size: 3.5rem; font-weight: 800;
+            line-height: 1; color: var(--text-primary); font-variant-numeric: tabular-nums;
+            margin-bottom: 0.5rem; display: block;
+        }
+        .digit-label {
+            font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-muted);
+        }
+        .progress-container { margin: 1.75rem 0 1.25rem; }
+        .progress-header {
+            display: flex; justify-content: space-between; font-size: 0.85rem;
+            font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;
+        }
+        .progress-track {
+            width: 100%; height: 10px; background-color: var(--bg-subtle);
+            border-radius: var(--radius-pill); overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%; background: linear-gradient(90deg, var(--primary), #8b5cf6);
+            border-radius: var(--radius-pill); transition: width 0.5s ease; width: 0%;
+        }
+        .timer-actions-bar {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+            gap: 0.85rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);
+        }
+        .timer-action-btn {
+            background-color: var(--bg-subtle); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 0.65rem 1.2rem; border-radius: var(--radius-md);
+            font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center;
+            gap: 0.5rem; cursor: pointer; transition: var(--transition);
+        }
+        .timer-action-btn:hover { background-color: var(--border-color); transform: translateY(-1px); }
+        .timer-action-btn.btn-primary {
+            background-color: var(--primary); color: #fff; border-color: var(--primary);
+        }
+        .timer-completed-box {
+            display: none; text-align: center; padding: 2rem 1rem; animation: fadeIn 0.4s ease;
+        }
+        .timer-completed-box.active { display: block; }
+        .timer-completed-box i { font-size: 3.5rem; color: var(--accent-amber); margin-bottom: 1rem; }
+
+        /* Secondary Metrics */
+        .metrics-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem; margin-bottom: 2.5rem;
+        }
+        .metric-card {
+            background-color: var(--bg-surface); border: 1px solid var(--border-color);
+            border-radius: var(--radius-md); padding: 1.25rem 1rem; text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .metric-val {
+            font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700;
+            color: var(--primary); margin-bottom: 0.25rem;
+        }
+        .metric-lbl {
+            font-size: 0.78rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);
+        }
+
+        /* Config Forms */
+        .config-card {
+            background-color: var(--bg-surface); border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl); padding: 2rem; margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-md);
+        }
+        .config-card-title {
+            font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .form-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;
+        }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-label { font-size: 0.88rem; font-weight: 600; }
+        .form-control {
+            background-color: var(--bg-base); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 0.75rem 1rem; border-radius: var(--radius-md);
+            font-size: 0.95rem; outline: none; transition: var(--transition);
+        }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-focus); }
+        .form-submit-btn {
+            background-color: var(--primary); color: #fff; border: none; padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md); font-weight: 700; cursor: pointer;
+            transition: var(--transition); display: inline-flex; align-items: center;
+            justify-content: center; gap: 0.5rem; height: 46px; align-self: flex-end;
+        }
+        .form-submit-btn:hover { background-color: var(--primary-hover); }
+
+        /* Notice Banners */
+        .notice-banner {
+            padding: 1.15rem 1.35rem; border-radius: var(--radius-lg); display: flex;
+            align-items: flex-start; gap: 1rem; margin: 1.5rem 0; font-size: 0.92rem; line-height: 1.55;
+        }
+        .notice-islamic {
+            background-color: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #065f46;
+        }
+        [data-theme="dark"] .notice-islamic {
+            background-color: rgba(16, 185, 129, 0.12); color: #a7f3d0;
+        }
+        .notice-life {
+            background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.35);
+            color: #92400e;
+        }
+        [data-theme="dark"] .notice-life {
+            background-color: rgba(245, 158, 11, 0.12); color: #fde68a;
+        }
+
+        /* Editorial & FAQ */
+        .editorial-section {
+            background-color: var(--bg-surface); border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl); padding: 2.5rem; margin-bottom: 3rem;
+        }
+        .editorial-section h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; }
+        .editorial-section h3 { font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 0.6rem; }
+        .editorial-section p, .editorial-section li {
+            font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;
+        }
+        .editorial-section ul, .editorial-section ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+
+        .faq-accordion { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+        .faq-item {
+            background-color: var(--bg-base); border: 1px solid var(--border-color);
+            border-radius: var(--radius-md); overflow: hidden;
+        }
+        .faq-question {
+            width: 100%; padding: 1.25rem 1.5rem; display: flex; align-items: center;
+            justify-content: space-between; background: none; border: none; font-size: 1.05rem;
+            font-weight: 600; cursor: pointer; text-align: left;
+        }
+        .faq-icon { color: var(--text-muted); transition: transform 0.25s ease; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--primary); }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+            padding: 0 1.5rem; color: var(--text-secondary); font-size: 0.95rem;
+        }
+        .faq-item.active .faq-answer { max-height: 400px; padding-bottom: 1.25rem; }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--bg-surface); border-top: 1px solid var(--border-color);
+            padding: 3.5rem 0 2rem; margin-top: auto;
+        }
+        .footer-bottom {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+            gap: 1rem; color: var(--text-muted); font-size: 0.88rem;
+        }
+
+        /* Toast */
+        .chrono-toast-container {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 999999;
+            display: flex; flex-direction: column; gap: 0.75rem; pointer-events: none;
+        }
+        .chrono-toast {
+            pointer-events: auto; background-color: var(--bg-surface-elevated);
+            color: var(--text-primary); border: 1px solid var(--border-color);
+            padding: 0.85rem 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-xl);
+            display: flex; align-items: center; gap: 0.75rem; font-size: 0.92rem; font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .countdown-digits-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+            .digit-number { font-size: 2.5rem; }
+            .hero-title { font-size: 2.1rem; }
+            .nav-menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand-logo" onclick="navigateTo('home')">
+                <div class="brand-icon-box"><i class="fa-solid fa-hourglass-start"></i></div>
+                <span>ChronoTimer<span class="brand-tag">16 Tools</span></span>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><span class="nav-link active" onclick="navigateTo('home')"><i class="fa-solid fa-house"></i> Home</span></li>
+                    <li><span class="nav-link" onclick="openTool('ramadan')"><i class="fa-solid fa-moon"></i> Ramadan</span></li>
+                    <li><span class="nav-link" onclick="openTool('hajj')"><i class="fa-solid fa-mosque"></i> Hajj</span></li>
+                    <li><span class="nav-link" onclick="openTool('life-countdown')"><i class="fa-solid fa-hourglass-half"></i> Life Calc</span></li>
+                    <li><span class="nav-link" onclick="openStatic('about')">About</span></li>
+                    <li><span class="nav-link" onclick="openStatic('contact')">Contact</span></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         VIEW 1: HOMEPAGE (ALL 16 TOOLS DIRECTORY & SEARCH)
+         ========================================================================= -->
+    <main id="view-home" class="app-view active">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-pill"><i class="fa-solid fa-bolt"></i> 100% Client-Side • Zero API Keys • Fast & Free</div>
+                <h1 class="hero-title">Every Second Counts. <br><span class="gradient-text">16 Live Countdown Tools</span></h1>
+                <p class="hero-description">Precision live countdowns for New Year, Ramadan, Eid, Hajj, Life Calculator, Payday, and Personal Milestones.</p>
+
+                <!-- Timezone Bar -->
+                <div class="tz-badge-bar">
+                    <div class="tz-badge">
+                        <span class="tz-pulse"></span>
+                        <span><strong>Asia/Karachi:</strong> <span id="hero-clock-karachi" style="font-family:var(--font-mono); color:var(--primary); font-weight:700;">Loading...</span></span>
+                    </div>
+                    <div class="tz-badge">
+                        <i class="fa-solid fa-laptop text-muted"></i>
+                        <span><strong>Your Local Time:</strong> <span id="hero-clock-local" style="font-family:var(--font-mono); font-weight:600;">Loading...</span></span>
+                    </div>
+                </div>
+
+                <!-- Instant Search -->
+                <div class="search-wrapper">
+                    <div class="search-input-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="search" id="tool-search" class="search-input" placeholder="Search any countdown tool (e.g. Ramadan, Birthday, Life, Weekend)...">
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-cat="All"><i class="fa-solid fa-border-all"></i> All Tools (16)</button>
+                    <button class="filter-btn" data-cat="Islamic"><i class="fa-solid fa-star-and-crescent"></i> Islamic</button>
+                    <button class="filter-btn" data-cat="Daily & Weekly"><i class="fa-solid fa-calendar-week"></i> Daily & Weekly</button>
+                    <button class="filter-btn" data-cat="Annual & Holidays"><i class="fa-solid fa-champagne-glasses"></i> Annual & Holidays</button>
+                    <button class="filter-btn" data-cat="Personal & Life"><i class="fa-solid fa-heart"></i> Personal & Life</button>
+                    <button class="filter-btn" data-cat="Work & Goals"><i class="fa-solid fa-briefcase"></i> Work & Goals</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Cards Grid -->
+        <section class="tools-section container">
+            <div class="tools-grid" id="home-tools-grid"></div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="container" style="max-width:840px; margin-bottom:5rem;">
+            <h2 style="font-size:2rem; font-weight:800; text-align:center; margin-bottom:0.5rem;">Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <article class="faq-item">
+                    <button class="faq-question"><span>Are these countdown timers free to use and share?</span><i class="fa-solid fa-chevron-down faq-icon"></i></button>
+                    <div class="faq-answer"><p>Yes, 100% free! You can customize any countdown and click the "Share Countdown" button to generate a direct shareable link.</p></div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question"><span>Why are Islamic countdowns subject to moon sighting?</span><i class="fa-solid fa-chevron-down faq-icon"></i></button>
+                    <div class="faq-answer"><p>Islamic months are lunar and begin upon physical crescent sighting (Hilal). Dates provided are astronomical projections and can be adjusted manually in each tool's settings.</p></div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question"><span>Does the Life Countdown predict lifespan?</span><i class="fa-solid fa-chevron-down faq-icon"></i></button>
+                    <div class="faq-answer"><p>No. It is strictly a mathematical perspective based on your entered target age (e.g. 80 years) to foster mindful time awareness (<em>Memento Mori</em>).</p></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         VIEW 2: DEDICATED TOOL VIEW (LIVE INTERACTIVE STAGE FOR SELECTED TOOL)
+         ========================================================================= -->
+    <main id="view-tool" class="app-view">
+        <div class="container tool-stage-wrapper">
+            <div class="back-nav-bar">
+                <button class="back-btn" onclick="navigateTo('home')">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All 16 Tools
+                </button>
+                <span style="color:var(--text-muted);">/</span>
+                <span id="active-tool-breadcrumb" style="font-weight:700; color:var(--text-primary);">Tool Name</span>
+            </div>
+
+            <!-- Dynamic Notice Banner (Islamic Moon Sighting or Life Calculator Disclaimer) -->
+            <div id="tool-notice-container"></div>
+
+            <div style="text-align:center; margin-bottom:1.5rem;">
+                <div id="active-tool-badge" class="tool-badge" style="display:inline-block; margin-bottom:0.5rem;">Category</div>
+                <h1 id="active-tool-title" style="font-size:2.4rem; font-weight:800; margin-bottom:0.4rem;">Tool Title</h1>
+                <p id="active-tool-desc" style="color:var(--text-secondary); max-width:650px; margin:0 auto;">Description</p>
+            </div>
+
+            <!-- Timer Stage Box -->
+            <section class="timer-stage">
+                <div class="timer-target-info">
+                    <div class="target-badge">
+                        <i class="fa-solid fa-calendar-check text-gold"></i>
+                        <span>Target: <span id="tool-target-display" class="target-date-highlight">Calculating...</span></span>
+                    </div>
+                    <div>
+                        <label for="tool-tz-select" style="font-size:0.88rem; color:var(--text-muted); margin-right:0.4rem;">Timezone:</label>
+                        <select id="tool-tz-select" class="timezone-dropdown">
+                            <option value="Asia/Karachi">Asia/Karachi (PKT, UTC+5)</option>
+                            <option value="local">Your Device Time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 4 Live Digits Grid -->
+                <div class="countdown-digits-grid">
+                    <div class="digit-card"><span id="t-days" class="digit-number">00</span><span class="digit-label">Days</span></div>
+                    <div class="digit-card"><span id="t-hours" class="digit-number">00</span><span class="digit-label">Hours</span></div>
+                    <div class="digit-card"><span id="t-mins" class="digit-number">00</span><span class="digit-label">Minutes</span></div>
+                    <div class="digit-card"><span id="t-secs" class="digit-number">00</span><span class="digit-label">Seconds</span></div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>Timeframe Progress Completed</span>
+                        <span id="t-progress-pct">0%</span>
+                    </div>
+                    <div class="progress-track"><div id="t-progress-fill" class="progress-fill"></div></div>
+                </div>
+
+                <!-- Celebration Card -->
+                <div id="t-celebrate" class="timer-completed-box">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <h2 id="t-celebrate-title" style="font-size:2rem; font-weight:800; margin-bottom:0.5rem;">Target Moment Reached! 🎉</h2>
+                    <p style="color:var(--text-muted);">The countdown has concluded!</p>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="timer-actions-bar">
+                    <button type="button" class="timer-action-btn" id="btn-fs"><i class="fa-solid fa-expand"></i> Fullscreen</button>
+                    <button type="button" class="timer-action-btn" id="btn-sound"><i class="fa-solid fa-bell"></i> Play Chime</button>
+                    <button type="button" class="timer-action-btn btn-primary" id="btn-share"><i class="fa-solid fa-share-nodes"></i> Share Countdown</button>
+                </div>
+            </section>
+
+            <!-- Secondary Metrics -->
+            <section class="metrics-grid">
+                <div class="metric-card"><div id="m-weeks" class="metric-val">0</div><div class="metric-lbl">Total Weeks</div></div>
+                <div class="metric-card"><div id="m-hours" class="metric-val">0</div><div class="metric-lbl">Total Hours</div></div>
+                <div class="metric-card"><div id="m-mins" class="metric-val">0</div><div class="metric-lbl">Total Minutes</div></div>
+                <div class="metric-card"><div id="m-secs" class="metric-val">0</div><div class="metric-lbl">Total Seconds</div></div>
+            </section>
+
+            <!-- Dynamic Tool Form Config -->
+            <section class="config-card">
+                <h2 class="config-card-title"><i class="fa-solid fa-sliders"></i> Tool Controls & Settings</h2>
+                <div id="tool-custom-form-slot"></div>
+            </section>
+
+            <!-- Editorial Guide for Active Tool -->
+            <article class="editorial-section" id="tool-editorial-content"></article>
+        </div>
+    </main>
+
+    <!-- =========================================================================
+         VIEW 3: ABOUT, CONTACT, PRIVACY, TERMS
+         ========================================================================= -->
+    <main id="view-static" class="app-view">
+        <div class="container" style="padding: 3rem 0 5rem; max-width:860px;">
+            <button class="back-btn" onclick="navigateTo('home')" style="margin-bottom:1.5rem;">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <article class="editorial-section" id="static-content-slot"></article>
+        </div>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 ChronoTimer Hub. 16 Countdown Tools. Pure HTML, CSS & JS.</p>
+            <div>
+                <a href="javascript:void(0)" onclick="openStatic('about')">About</a> •
+                <a href="javascript:void(0)" onclick="openStatic('contact')">Contact</a> •
+                <a href="javascript:void(0)" onclick="openStatic('privacy')">Privacy</a> •
+                <a href="javascript:void(0)" onclick="openStatic('terms')">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         ALL JAVASCRIPT: ENGINE, REGISTRY, SOUND, CONFETTI & UI
+         ========================================================================= -->
+    <script>
+        /* 16 TOOLS REGISTRY */
+        const TOOLS_REGISTRY = [
+            { id: "new-year", name: "New Year Countdown", icon: "fa-champagne-glasses", category: "Annual & Holidays", badge: "Popular", desc: "Live countdown to upcoming January 1st midnight.", keywords: ["new year", "january 1", "2027"] },
+            { id: "weekend", name: "Weekend & Week Countdown", icon: "fa-mug-hot", category: "Daily & Weekly", badge: "Daily", desc: "Count down the hours until Friday 5 PM or Sunday night.", keywords: ["weekend", "friday", "sunday"] },
+            { id: "birthday", name: "Birthday Countdown", icon: "fa-cake-candles", category: "Personal & Life", badge: "Milestone", desc: "Track next birthday and upcoming age milestone.", keywords: ["birthday", "age", "milestone"] },
+            { id: "custom-event", name: "Custom Event Countdown", icon: "fa-calendar-plus", category: "Custom Timers", badge: "Versatile", desc: "Create a tailored timer for any event, meeting, or launch.", keywords: ["custom", "meeting", "launch"] },
+            { id: "ramadan", name: "Ramadan Countdown", icon: "fa-moon", category: "Islamic", badge: "Spiritual", desc: "Countdown to 1st Ramadan (1448 AH) fasting month.", keywords: ["ramadan", "ramzan", "fasting", "islamic"] },
+            { id: "eid-ul-fitr", name: "Eid ul-Fitr Countdown", icon: "fa-star-and-crescent", category: "Islamic", badge: "Spiritual", desc: "Live timer to 1st Shawwal celebrating completion of Ramadan.", keywords: ["eid", "eid ul fitr", "shawwal"] },
+            { id: "eid-ul-adha", name: "Eid ul-Adha Countdown", icon: "fa-kaaba", category: "Islamic", badge: "Spiritual", desc: "Live timer to 10th Dhul Hijjah and the days of Qurbani.", keywords: ["eid ul adha", "bakra eid", "qurbani"] },
+            { id: "hajj", name: "Hajj Pilgrimage Countdown", icon: "fa-mosque", category: "Islamic", badge: "Spiritual", desc: "Sacred annual pilgrimage in Makkah (8th Dhul Hijjah rites).", keywords: ["hajj", "pilgrimage", "makkah", "arafah"] },
+            { id: "life-countdown", name: "Life Countdown Calculator", icon: "fa-hourglass-half", category: "Personal & Life", badge: "Perspective", desc: "Mathematical time perspective based on selected target age.", keywords: ["life", "memento mori", "target age", "weeks left"] },
+            { id: "retirement", name: "Retirement Countdown", icon: "fa-umbrella-beach", category: "Work & Goals", badge: "Career", desc: "Remaining working days (Mon-Fri) and business weeks.", keywords: ["retirement", "workdays", "career"] },
+            { id: "payday", name: "Payday / Salary Countdown", icon: "fa-wallet", category: "Work & Goals", badge: "Finance", desc: "Know exactly when your next paycheck arrives.", keywords: ["salary", "payday", "paycheck"] },
+            { id: "exam", name: "Exam & Study Countdown", icon: "fa-graduation-cap", category: "Education & Productivity", badge: "Study", desc: "Stay motivated for finals and board tests with study hours.", keywords: ["exam", "test", "study"] },
+            { id: "wedding", name: "Wedding & Anniversary Countdown", icon: "fa-heart", category: "Personal & Life", badge: "Celebration", desc: "Couple names timer to the wedding day or anniversary.", keywords: ["wedding", "marriage", "couple"] },
+            { id: "vacation", name: "Vacation & Holiday Countdown", icon: "fa-plane-departure", category: "Personal & Life", badge: "Travel", desc: "Track days until flight takeoff or holiday road trip.", keywords: ["vacation", "travel", "holiday"] },
+            { id: "daily-reset", name: "Daily Reset / Midnight Countdown", icon: "fa-clock", category: "Daily & Weekly", badge: "Daily", desc: "Countdown to midnight tonight. 24-hour day progress.", keywords: ["midnight", "today", "daily reset"] },
+            { id: "new-month", name: "New Month Countdown", icon: "fa-calendar-day", category: "Daily & Weekly", badge: "Monthly", desc: "Days remaining until the 1st of next month.", keywords: ["new month", "month end", "goals"] }
+        ];
+
+        /* WEB AUDIO SYNTHESIZER (NO EXTERNAL AUDIO NEEDED) */
+        function playChime() {
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                const ctx = new AudioCtx();
+                const now = ctx.currentTime;
+                [587.33, 880.00, 1174.66].forEach((f, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(f, now + (i * 0.12));
+                    gain.gain.setValueAtTime(0.2, now + (i * 0.12));
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + (i * 0.12) + 1.2);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now + (i * 0.12));
+                    osc.stop(now + (i * 0.12) + 1.25);
+                });
+            } catch(e) {}
+        }
+
+        /* CANVAS CONFETTI */
+        function fireConfetti() {
+            let canvas = document.getElementById("confetti-canvas");
+            if (!canvas) {
+                canvas = document.createElement("canvas");
+                canvas.id = "confetti-canvas";
+                canvas.style.position = "fixed"; canvas.style.top = "0"; canvas.style.left = "0";
+                canvas.style.width = "100vw"; canvas.style.height = "100vh";
+                canvas.style.pointerEvents = "none"; canvas.style.zIndex = "99999";
+                document.body.appendChild(canvas);
+            }
+            const ctx = canvas.getContext("2d");
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            const parts = [];
+            const cols = ["#2563eb", "#38bdf8", "#10b981", "#f59e0b", "#ec4899", "#8b5cf6"];
+            for (let i = 0; i < 90; i++) {
+                parts.push({
+                    x: Math.random() * canvas.width, y: Math.random() * canvas.height * 0.3,
+                    w: Math.random() * 8 + 4, h: Math.random() * 5 + 3,
+                    col: cols[Math.floor(Math.random() * cols.length)],
+                    vx: (Math.random() - 0.5) * 5, vy: Math.random() * 4 + 2,
+                    rot: Math.random() * 360, vRot: (Math.random() - 0.5) * 8, op: 1
+                });
+            }
+            function anim() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = 0;
+                parts.forEach(p => {
+                    p.x += p.vx; p.y += p.vy; p.rot += p.vRot; p.op -= 0.008;
+                    if (p.op > 0 && p.y < canvas.height) {
+                        alive++;
+                        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate((p.rot * Math.PI) / 180);
+                        ctx.globalAlpha = Math.max(0, p.op); ctx.fillStyle = p.col;
+                        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+                    }
+                });
+                if (alive > 0) requestAnimationFrame(anim);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            anim();
+        }
+
+        /* TOAST ALERT */
+        function showToast(msg) {
+            let box = document.getElementById("toast-box");
+            if (!box) {
+                box = document.createElement("div"); box.id = "toast-box";
+                box.className = "chrono-toast-container"; document.body.appendChild(box);
+            }
+            const t = document.createElement("div"); t.className = "chrono-toast";
+            t.innerHTML = `<i class="fa-solid fa-circle-check text-gold"></i><span>${msg}</span>`;
+            box.appendChild(t);
+            setTimeout(() => t.remove(), 3000);
+        }
+
+        /* CORE TIMER MATH */
+        function calcDelta(targetDate, startDate) {
+            const now = new Date();
+            const target = new Date(targetDate);
+            const diffMs = target.getTime() - now.getTime();
+            if (diffMs <= 0) return { finished: true, days: 0, hours: 0, mins: 0, secs: 0, totalSecs: 0, pct: 100 };
+            const totalSecs = Math.floor(diffMs / 1000);
+            const days = Math.floor(totalSecs / 86400);
+            const hours = Math.floor((totalSecs % 86400) / 3600);
+            const mins = Math.floor((totalSecs % 3600) / 60);
+            const secs = totalSecs % 60;
+            let pct = 0;
+            if (startDate) {
+                const s = new Date(startDate).getTime();
+                const span = target.getTime() - s;
+                if (span > 0) pct = Math.min(100, Math.max(0, Math.round(((now.getTime() - s) / span) * 100)));
+            }
+            return { finished: false, days, hours, mins, secs, totalSecs, pct };
+        }
+
+        function padZ(n) { return String(n).padStart(2, "0"); }
+
+        function formatDT(dt, tz = "Asia/Karachi") {
+            try {
+                return new Intl.DateTimeFormat("en-US", {
+                    timeZone: tz, weekday: "short", year: "numeric", month: "short",
+                    day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
+                }).format(new Date(dt));
+            } catch(e) { return new Date(dt).toLocaleString(); }
+        }
+
+        /* PROJECTED ISLAMIC DATES (South Asia / Karachi Meridian) */
+        function getIslamicDates() {
+            const now = new Date();
+            let ramadan = new Date("2027-02-09T00:00:00+05:00");
+            let eidFitr = new Date("2027-03-11T00:00:00+05:00");
+            let hajj = new Date("2027-05-16T00:00:00+05:00");
+            let eidAdha = new Date("2027-05-18T00:00:00+05:00");
+            if (now > ramadan) ramadan = new Date("2028-01-29T00:00:00+05:00");
+            if (now > eidFitr) eidFitr = new Date("2028-02-28T00:00:00+05:00");
+            if (now > hajj) hajj = new Date("2028-05-05T00:00:00+05:00");
+            if (now > eidAdha) eidAdha = new Date("2028-05-07T00:00:00+05:00");
+            return { ramadan, eidFitr, hajj, eidAdha };
+        }
+
+        /* STATE VARIABLES */
+        let activeToolId = null;
+        let activeTargetDate = null;
+        let activeStartDate = null;
+        let activeInterval = null;
+        let activeCelebrated = false;
+        let userTz = localStorage.getItem("preferred_tz") || "Asia/Karachi";
+
+        /* INITIALIZATION */
+        document.addEventListener("DOMContentLoaded", () => {
+            initTheme();
+            initLiveHeroClocks();
+            renderHomeCards();
+            initSearchAndFilters();
+            initFaq();
+            initActionButtons();
+
+            // Hash router check
+            const hash = window.location.hash.replace("#", "");
+            if (hash && TOOLS_REGISTRY.some(t => t.id === hash)) {
+                openTool(hash);
+            }
+        });
+
+        /* THEME TOGGLE */
+        function initTheme() {
+            const theme = localStorage.getItem("chrono_theme") || "light";
+            document.documentElement.setAttribute("data-theme", theme);
+            const btn = document.getElementById("theme-btn");
+            if (btn) {
+                btn.innerHTML = `<i class="fa-solid fa-${theme === 'dark' ? 'sun' : 'moon'}"></i>`;
+                btn.onclick = () => {
+                    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                    document.documentElement.setAttribute("data-theme", next);
+                    localStorage.setItem("chrono_theme", next);
+                    btn.innerHTML = `<i class="fa-solid fa-${next === 'dark' ? 'sun' : 'moon'}"></i>`;
+                };
+            }
+        }
+
+        /* LIVE HERO CLOCKS */
+        function initLiveHeroClocks() {
+            const kEl = document.getElementById("hero-clock-karachi");
+            const lEl = document.getElementById("hero-clock-local");
+            setInterval(() => {
+                const now = new Date();
+                if (kEl) kEl.textContent = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Karachi", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true }).format(now) + " PKT";
+                if (lEl) lEl.textContent = now.toLocaleTimeString();
+            }, 1000);
+        }
+
+        /* RENDER HOMEPAGE CARDS */
+        function renderHomeCards() {
+            const grid = document.getElementById("home-tools-grid");
+            if (!grid) return;
+            grid.innerHTML = TOOLS_REGISTRY.map(t => `
+                <article class="tool-card" onclick="openTool('${t.id}')">
+                    <div>
+                        <div class="tool-card-top">
+                            <div class="tool-icon-wrapper"><i class="fa-solid ${t.icon}"></i></div>
+                            <span class="tool-badge">${t.badge}</span>
+                        </div>
+                        <h3 class="tool-title">${t.name}</h3>
+                        <p class="tool-desc">${t.desc}</p>
+                    </div>
+                    <div>
+                        <div class="card-mini-timer" id="mini-${t.id}">
+                            <span><i class="fa-regular fa-clock"></i> Target</span>
+                            <span class="mini-digits">Loading...</span>
+                        </div>
+                        <div class="tool-card-footer">
+                            <span class="tool-category-label">${t.category}</span>
+                            <span class="tool-action-btn">Open Tool <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </article>
+            `).join("");
+
+            // Mini timers tick
+            setInterval(() => {
+                const now = new Date();
+                const isl = getIslamicDates();
+                TOOLS_REGISTRY.forEach(t => {
+                    const el = document.querySelector(`#mini-${t.id} .mini-digits`);
+                    if (!el) return;
+                    let target = getToolDefaultDate(t.id, now, isl);
+                    if (target) {
+                        const d = calcDelta(target);
+                        el.textContent = d.finished ? "Live Now!" : `${d.days}d ${d.hours}h ${d.mins}m ${d.secs}s`;
+                    } else {
+                        el.textContent = "Interactive";
+                    }
+                });
+            }, 1000);
+        }
+
+        function getToolDefaultDate(id, now, isl) {
+            const y = now.getFullYear();
+            if (id === "new-year") return new Date(`${y + 1}-01-01T00:00:00+05:00`);
+            if (id === "weekend") {
+                const day = now.getDay();
+                const dFriday = (5 - day + 7) % 7;
+                const t = new Date(now);
+                t.setDate(now.getDate() + (dFriday === 0 && now.getHours() >= 17 ? 7 : dFriday));
+                t.setHours(17, 0, 0, 0);
+                return t;
+            }
+            if (id === "daily-reset") return new Date(y, now.getMonth(), now.getDate() + 1, 0, 0, 0);
+            if (id === "new-month") return new Date(y, now.getMonth() + 1, 1, 0, 0, 0);
+            if (id === "ramadan") return isl.ramadan;
+            if (id === "eid-ul-fitr") return isl.eidFitr;
+            if (id === "eid-ul-adha") return isl.eidAdha;
+            if (id === "hajj") return isl.hajj;
+            if (id === "payday") return new Date(y, now.getMonth() + 1, 1, 0, 0, 0);
+            return null;
+        }
+
+        /* SEARCH & FILTER */
+        function initSearchAndFilters() {
+            const inp = document.getElementById("tool-search");
+            const btns = document.querySelectorAll(".filter-btn");
+            function filter() {
+                const q = inp ? inp.value.toLowerCase().trim() : "";
+                const cat = document.querySelector(".filter-btn.active")?.dataset.cat || "All";
+                document.querySelectorAll(".tool-card").forEach(c => {
+                    const title = c.querySelector(".tool-title").textContent.toLowerCase();
+                    const desc = c.querySelector(".tool-desc").textContent.toLowerCase();
+                    const category = c.querySelector(".tool-category-label").textContent;
+                    const matchQ = !q || title.includes(q) || desc.includes(q);
+                    const matchC = cat === "All" || category === cat;
+                    c.style.display = (matchQ && matchC) ? "flex" : "none";
+                });
+            }
+            if (inp) inp.addEventListener("input", filter);
+            btns.forEach(b => {
+                b.onclick = () => {
+                    btns.forEach(x => x.classList.remove("active"));
+                    b.classList.add("active");
+                    filter();
+                };
+            });
+        }
+
+        function initFaq() {
+            document.querySelectorAll(".faq-item").forEach(item => {
+                const q = item.querySelector(".faq-question");
+                if (q) q.onclick = () => item.classList.toggle("active");
+            });
+        }
+
+        /* NAVIGATION */
+        function navigateTo(viewName) {
+            document.querySelectorAll(".app-view").forEach(v => v.classList.remove("active"));
+            const target = document.getElementById(`view-${viewName}`);
+            if (target) target.classList.add("active");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (viewName === "home") {
+                history.pushState(null, null, " ");
+                if (activeInterval) clearInterval(activeInterval);
+            }
+        }
+
+        /* OPEN TOOL VIEW */
+        function openTool(toolId) {
+            const tool = TOOLS_REGISTRY.find(t => t.id === toolId);
+            if (!tool) return;
+            activeToolId = toolId;
+            activeCelebrated = false;
+            window.location.hash = toolId;
+
+            navigateTo("tool");
+
+            document.getElementById("active-tool-breadcrumb").textContent = tool.name;
+            document.getElementById("active-tool-title").textContent = tool.name;
+            document.getElementById("active-tool-desc").textContent = tool.desc;
+            document.getElementById("active-tool-badge").textContent = tool.category;
+
+            // Notice Banner setup
+            const noticeBox = document.getElementById("tool-notice-container");
+            noticeBox.innerHTML = "";
+            if (["ramadan", "eid-ul-fitr", "eid-ul-adha", "hajj"].includes(toolId)) {
+                noticeBox.innerHTML = `
+                    <div class="notice-banner notice-islamic">
+                        <i class="fa-solid fa-moon"></i>
+                        <div>
+                            <strong>Moon Sighting (Hilal) Advisory:</strong> Islamic dates depend on the physical sighting of the crescent moon by regional moon sighting committees (e.g. Central Ruet-e-Hilal Committee). Dates shown are astronomical projections and may shift by ±1 to 2 days. You can adjust the expected date below.
+                        </div>
+                    </div>
+                `;
+            } else if (toolId === "life-countdown") {
+                noticeBox.innerHTML = `
+                    <div class="notice-banner notice-life">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <strong>Mathematical Estimate Only — Not a Prediction of Lifespan:</strong> This tool performs an arithmetic calculation based strictly on the target age you input. It has no biological or medical validity and does NOT predict human lifespan.
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Timezone selector
+            const tzSel = document.getElementById("tool-tz-select");
+            tzSel.value = userTz;
+            tzSel.onchange = (e) => {
+                userTz = e.target.value;
+                localStorage.setItem("preferred_tz", userTz);
+                updateTargetDisplay();
+                showToast(`Timezone switched to ${userTz === "Asia/Karachi" ? "Karachi (PKT)" : "Local Time"}`);
+            };
+
+            // Custom Form & Dates Setup
+            setupToolData(toolId);
+            startToolCountdown();
+        }
+
+        function setupToolData(toolId) {
+            const now = new Date();
+            const y = now.getFullYear();
+            const isl = getIslamicDates();
+            const slot = document.getElementById("tool-custom-form-slot");
+            const editorial = document.getElementById("tool-editorial-content");
+
+            activeStartDate = null;
+
+            if (toolId === "new-year") {
+                activeTargetDate = new Date(`${y + 1}-01-01T00:00:00+05:00`);
+                activeStartDate = new Date(`${y}-01-01T00:00:00+05:00`);
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Target Year:</label>
+                            <input type="number" name="targetYear" class="form-control" value="${y + 1}" min="2027" max="2050">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Update Year</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>About the New Year Countdown</h2><p>Calculates the exact time until January 1st midnight in Asia/Karachi (PKT, UTC+5). As each second elapses, the progress bar updates your year completed.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    const yr = e.target.targetYear.value;
+                    activeTargetDate = new Date(`${yr}-01-01T00:00:00+05:00`);
+                    updateTargetDisplay();
+                    showToast("Target year updated!");
+                };
+            }
+            else if (toolId === "ramadan") {
+                activeTargetDate = isl.ramadan;
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Expected 1st Ramadan Date:</label>
+                            <input type="date" name="expDate" class="form-control" value="${isl.ramadan.toISOString().slice(0, 10)}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Update Date</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Ramadan Fasting & Moon Sighting</h2><p>Ramadan is the sacred month of fasting, dawn-to-sunset devotion, and Quran recitation. While astronomical models pinpoint the lunation, regional Ruet-e-Hilal committees declare the official date.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = new Date(`${e.target.expDate.value}T00:00:00+05:00`);
+                    updateTargetDisplay();
+                    showToast("Ramadan date updated!");
+                };
+            }
+            else if (toolId === "hajj") {
+                activeTargetDate = isl.hajj;
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Expected 8th Dhul Hijjah Date (Hajj Start):</label>
+                            <input type="date" name="expDate" class="form-control" value="${isl.hajj.toISOString().slice(0, 10)}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Update Hajj Date</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Hajj Pilgrimage Timeline</h2><p>Hajj rites commence on the 8th of Dhul Hijjah (Yawm at-Tarwiyah) through the 9th of Dhul Hijjah (Day of Arafah) in Makkah. It symbolizes purity, submission, and universal brotherhood.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = new Date(`${e.target.expDate.value}T00:00:00+05:00`);
+                    updateTargetDisplay();
+                    showToast("Hajj date updated!");
+                };
+            }
+            else if (toolId === "eid-ul-fitr") {
+                activeTargetDate = isl.eidFitr;
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Expected Eid ul-Fitr Date (1st Shawwal):</label>
+                            <input type="date" name="expDate" class="form-control" value="${isl.eidFitr.toISOString().slice(0, 10)}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Update Eid Date</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Celebrating Eid ul-Fitr</h2><p>Celebrated on the first of Shawwal following the completion of Ramadan fasting. A day of thanksgiving, congregational prayer, and charity.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = new Date(`${e.target.expDate.value}T00:00:00+05:00`);
+                    updateTargetDisplay();
+                    showToast("Eid ul-Fitr date updated!");
+                };
+            }
+            else if (toolId === "eid-ul-adha") {
+                activeTargetDate = isl.eidAdha;
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Expected Eid ul-Adha Date (10th Dhul Hijjah):</label>
+                            <input type="date" name="expDate" class="form-control" value="${isl.eidAdha.toISOString().slice(0, 10)}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Update Date</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Tradition of Eid ul-Adha & Qurbani</h2><p>Commemorates Prophet Ibrahim's devotion and coincides with the completion of the sacred Hajj pilgrimage.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = new Date(`${e.target.expDate.value}T00:00:00+05:00`);
+                    updateTargetDisplay();
+                    showToast("Eid ul-Adha date updated!");
+                };
+            }
+            else if (toolId === "birthday") {
+                const dob = "2000-01-01";
+                function getBday(dStr) {
+                    const [by, bm, bd] = dStr.split("-").map(Number);
+                    let nb = new Date(y, bm - 1, bd, 0, 0, 0);
+                    if (now > nb) nb = new Date(y + 1, bm - 1, bd, 0, 0, 0);
+                    return nb;
+                }
+                activeTargetDate = getBday(dob);
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Your Date of Birth:</label>
+                            <input type="date" name="dob" class="form-control" value="${dob}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-cake-candles"></i> Set Birthday</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Tracking Milestone Birthdays</h2><p>Automatically rolls over to the next year once your birthday passes at midnight.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = getBday(e.target.dob.value);
+                    updateTargetDisplay();
+                    showToast("Birthday timer updated!");
+                };
+            }
+            else if (toolId === "life-countdown") {
+                const dob = "1995-01-01";
+                const age = 80;
+                function getLife(dStr, a) {
+                    const [by, bm, bd] = dStr.split("-").map(Number);
+                    activeStartDate = new Date(dStr);
+                    return new Date(by + a, bm - 1, bd, 0, 0, 0);
+                }
+                activeTargetDate = getLife(dob, age);
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Date of Birth:</label>
+                            <input type="date" name="dob" class="form-control" value="${dob}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Milestone Age (Years):</label>
+                            <input type="number" name="age" class="form-control" value="${age}" min="40" max="120">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-calculator"></i> Recalculate</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>The Stoic Value of Time Awareness</h2><p>Inspired by <em>Memento Mori</em> and Oliver Burkeman's <em>Four Thousand Weeks</em>. Visualizing time in weeks inspires focus, purposeful effort, and gratitude.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = getLife(e.target.dob.value, parseInt(e.target.age.value, 10));
+                    updateTargetDisplay();
+                    showToast("Perspective recalculated!");
+                };
+            }
+            else if (toolId === "weekend") {
+                const day = now.getDay();
+                const dFri = (5 - day + 7) % 7;
+                activeTargetDate = new Date(now);
+                activeTargetDate.setDate(now.getDate() + (dFri === 0 && now.getHours() >= 17 ? 7 : dFri));
+                activeTargetDate.setHours(17, 0, 0, 0);
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Weekend Target:</label>
+                            <select name="wMode" class="form-control">
+                                <option value="fri" selected>Friday 5:00 PM (Work Week End)</option>
+                                <option value="sun">Sunday Midnight (Week Reset)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-check"></i> Apply Mode</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Work Week Balance</h2><p>Track your weekly sprints and plan your weekend relaxation in advance.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    const m = e.target.wMode.value;
+                    const d = now.getDay();
+                    const t = new Date(now);
+                    if (m === "sun") {
+                        const dSun = (7 - d) % 7;
+                        t.setDate(now.getDate() + (dSun === 0 ? 7 : dSun));
+                        t.setHours(23, 59, 59, 999);
+                    } else {
+                        const dF = (5 - d + 7) % 7;
+                        t.setDate(now.getDate() + (dF === 0 && now.getHours() >= 17 ? 7 : dF));
+                        t.setHours(17, 0, 0, 0);
+                    }
+                    activeTargetDate = t;
+                    updateTargetDisplay();
+                    showToast("Mode updated!");
+                };
+            }
+            else {
+                // Generic Custom/Payday/Exam/Vacation/Wedding/Daily/Month default setup
+                const defTarget = new Date();
+                defTarget.setDate(defTarget.getDate() + 15);
+                activeTargetDate = defTarget;
+                slot.innerHTML = `
+                    <form id="cfg-form" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Custom Target Date & Time:</label>
+                            <input type="datetime-local" name="dt" class="form-control" value="${new Date(defTarget.getTime() - (defTarget.getTimezoneOffset() * 60000)).toISOString().slice(0, 16)}">
+                        </div>
+                        <button type="submit" class="form-submit-btn"><i class="fa-solid fa-play"></i> Start Timer</button>
+                    </form>
+                `;
+                editorial.innerHTML = `<h2>Dedicated Timekeeping</h2><p>This timer updates in real time every second natively in your browser.</p>`;
+                document.getElementById("cfg-form").onsubmit = (e) => {
+                    e.preventDefault();
+                    activeTargetDate = new Date(e.target.dt.value);
+                    updateTargetDisplay();
+                    showToast("Timer updated!");
+                };
+            }
+
+            updateTargetDisplay();
+        }
+
+        function updateTargetDisplay() {
+            const el = document.getElementById("tool-target-display");
+            if (el && activeTargetDate) el.textContent = formatDT(activeTargetDate, userTz);
+        }
+
+        function startToolCountdown() {
+            if (activeInterval) clearInterval(activeInterval);
+            const celBox = document.getElementById("t-celebrate");
+            if (celBox) celBox.classList.remove("active");
+
+            const tick = () => {
+                if (!activeTargetDate) return;
+                const d = calcDelta(activeTargetDate, activeStartDate);
+
+                document.getElementById("t-days").textContent = padZ(d.days);
+                document.getElementById("t-hours").textContent = padZ(d.hours);
+                document.getElementById("t-mins").textContent = padZ(d.mins);
+                document.getElementById("t-secs").textContent = padZ(d.secs);
+
+                document.getElementById("m-weeks").textContent = (d.days / 7).toFixed(1);
+                document.getElementById("m-hours").textContent = ((d.days * 24) + d.hours).toLocaleString();
+                document.getElementById("m-mins").textContent = Math.floor(d.totalSecs / 60).toLocaleString();
+                document.getElementById("m-secs").textContent = d.totalSecs.toLocaleString();
+
+                const fill = document.getElementById("t-progress-fill");
+                const pct = document.getElementById("t-progress-pct");
+                if (fill && pct) {
+                    fill.style.width = `${d.pct}%`;
+                    pct.textContent = `${d.pct}%`;
+                }
+
+                if (d.finished && !activeCelebrated) {
+                    activeCelebrated = true;
+                    if (celBox) celBox.classList.add("active");
+                    playChime();
+                    fireConfetti();
+                }
+            };
+
+            tick();
+            activeInterval = setInterval(tick, 1000);
+        }
+
+        /* ACTION BUTTONS (FULLSCREEN, SOUND, SHARE) */
+        function initActionButtons() {
+            const btnFs = document.getElementById("btn-fs");
+            if (btnFs) {
+                btnFs.onclick = () => {
+                    const st = document.querySelector(".timer-stage");
+                    if (!document.fullscreenElement) {
+                        if (st.requestFullscreen) st.requestFullscreen();
+                    } else {
+                        if (document.exitFullscreen) document.exitFullscreen();
+                    }
+                };
+            }
+            const btnS = document.getElementById("btn-sound");
+            if (btnS) {
+                btnS.onclick = () => { playChime(); showToast("Played victory chime!"); };
+            }
+            const btnSh = document.getElementById("btn-share");
+            if (btnSh) {
+                btnSh.onclick = () => {
+                    const url = window.location.origin + window.location.pathname + "#" + activeToolId;
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(url).then(() => showToast("Shareable link copied to clipboard!"));
+                    } else {
+                        showToast("Share URL: " + url);
+                    }
+                };
+            }
+        }
+
+        /* STATIC PAGES VIEW (ABOUT, CONTACT, PRIVACY, TERMS) */
+        function openStatic(pageKey) {
+            navigateTo("static");
+            const slot = document.getElementById("static-content-slot");
+            if (pageKey === "about") {
+                slot.innerHTML = `
+                    <h1>About Velqora Info</h1>
+                    <p>Welcome to <strong>Velqora Info (ChronoTimer Hub)</strong> — aap ka reliable aur precision live countdown platform! Humari koshish hai ke har ahem tehwar, Islamic event, aur personal milestone ko track karna bilkul asan aur khoobsurat banaya jaye.</p>
+                    
+                    <h3>Engineering & Design Features</h3>
+                    <ul>
+                        <li><strong>16 Precision Countdown Tools:</strong> New Year, Ramadan, Eid ul-Fitr, Eid ul-Adha, Hajj, Birthday, Weekend, Payday aur Life Calculators.</li>
+                        <li><strong>100% Client-Side Computation:</strong> Native browser APIs se chalne wala tez engine — zero server lag aur bilkul muft.</li>
+                        <li><strong>Asia/Karachi & Local Timezones:</strong> Pakistan Standard Time (PKT, UTC+5) ke sath sath aap ke device ke time par accurate synchronization.</li>
+                        <li><strong>Complete Privacy:</strong> Koi private data collect nahi hota, aap ke custom timers sirf aap ke browser mein rehte hain.</li>
+                    </ul>
+                `;
+            } else if (pageKey === "contact") {
+                slot.innerHTML = `
+                    <h1>Contact Us</h1>
+                    <p>Agar aap ka koi sawal, feedback ya dates update karne ke hawalay se koi suggestion ho, toh direct humse rabta karein:</p>
+                    
+                    <div style="background:var(--bg-subtle); padding:1.25rem 1.5rem; border-radius:var(--radius-md); border:1px solid var(--border-color); margin:1.5rem 0;">
+                        <p style="margin:0; font-size:1.05rem;">
+                            <i class="fa-solid fa-envelope" style="color:var(--primary); margin-right:0.5rem;"></i>
+                            <strong>Official Email:</strong> 
+                            <a href="mailto:misterjojo215@gmail.com" style="color:var(--primary); font-weight:700; margin-left:0.25rem;">misterjojo215@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <form class="form-grid" style="grid-template-columns:1fr; margin-top:1.5rem;" onsubmit="event.preventDefault(); showToast('Thank you! Message received.'); this.reset();">
+                        <div class="form-group"><label class="form-label">Full Name:</label><input type="text" required class="form-control" placeholder="Aap Ka Naam"></div>
+                        <div class="form-group"><label class="form-label">Email:</label><input type="email" required class="form-control" placeholder="misterjojo215@gmail.com"></div>
+                        <div class="form-group"><label class="form-label">Message:</label><textarea required rows="4" class="form-control" placeholder="Apna message yahan likhein..."></textarea></div>
+                        <button type="submit" class="form-submit-btn" style="max-width:200px;">Send Feedback</button>
+                    </form>
+                `;
+            } else if (pageKey === "privacy") {
+                slot.innerHTML = `
+                    <h1>Privacy Policy</h1>
+                    <p>We respect your privacy. No registration is required. All customized countdown dates are stored strictly in your browser's local storage and never transmitted to our servers.</p>
+                `;
+            } else if (pageKey === "terms") {
+                slot.innerHTML = `
+                    <h1>Terms of Service</h1>
+                    <p>Our tools are free for personal, classroom, and live presentation use. Islamic dates are astronomical estimates subject to regional moon sightings. The Life Countdown is an analytical estimate, not a medical prediction of lifespan.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
