@@ -1,0 +1,3607 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Countdown | Friday 5:00 PM Sprint Timer - Velqora</title>
+    <meta name="description" content="Count down the sprint hours until Friday 5:00 PM weekend kickoff or Sunday night weekly reset.">
+    <meta name="keywords" content="weekend countdown, countdown to friday, hours until weekend, friday 5pm timer">
+    <link rel="canonical" href="https://velqorainfo.vercel.app/weekend-countdown.html">
+    <meta name="theme-color" content="#0b2545">
+
+    <!-- Open Graph Meta Tags for WhatsApp & Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velqorainfo.vercel.app/weekend-countdown.html">
+    <meta property="og:title" content="Weekend Countdown | Friday 5:00 PM Sprint Timer - Velqora">
+    <meta property="og:description" content="Count down the sprint hours until Friday 5:00 PM weekend kickoff or Sunday night weekly reset.">
+    <meta property="og:site_name" content="Velqora Time & Date Hub">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="IRHRfLiihyHKPN-Lox4a3GaeW7s5J2oLbB11uaEJkJ8" />
+
+    <!-- Schema.org Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Weekend & Friday 5 PM Kickoff Countdown",
+      "url": "https://velqorainfo.vercel.app/weekend-countdown.html",
+      "description": "Count down the sprint hours until Friday 5:00 PM weekend kickoff or Sunday night weekly reset.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           Timeanddate.com-Inspired Design System & Color Tokens
+           ========================================================================== */
+        :root {
+            --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+
+            /* timeanddate.com Classic Palette */
+            --brand-navy: #0b2545;
+            --brand-navy-deep: #06182e;
+            --brand-blue: #13699c;
+            --brand-blue-hover: #0d4b71;
+            --brand-blue-light: #e8f4fb;
+            --brand-gold: #f59e0b;
+            --brand-gold-subtle: #fef3c7;
+            --brand-green: #059669;
+            --brand-red: #dc2626;
+
+            /* Surface Colors (Light) */
+            --bg-body: #f3f5f8;
+            --bg-card: #ffffff;
+            --bg-card-alt: #f8fafc;
+            --bg-header-top: #0b2545;
+            --bg-nav: #133a68;
+            --bg-subtle: #edf2f7;
+            --border-light: #d8e2ec;
+            --border-strong: #cbd5e1;
+
+            /* Text Colors */
+            --text-main: #1e293b;
+            --text-heading: #0b2545;
+            --text-muted: #64748b;
+            --text-light: #ffffff;
+            --text-on-navy: #e2e8f0;
+
+            /* Shadows & Radius */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        [data-theme="dark"] {
+            --brand-navy: #0f172a;
+            --brand-navy-deep: #090d16;
+            --brand-blue: #38bdf8;
+            --brand-blue-hover: #7dd3fc;
+            --brand-blue-light: rgba(56, 189, 248, 0.15);
+            --bg-body: #0b1120;
+            --bg-card: #151e32;
+            --bg-card-alt: #1b2640;
+            --bg-header-top: #070d19;
+            --bg-nav: #0c1527;
+            --bg-subtle: #1e293b;
+            --border-light: #25334d;
+            --border-strong: #334155;
+            --text-main: #f1f5f9;
+            --text-heading: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-on-navy: #cbd5e1;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Base Resets */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        a { color: var(--brand-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
+        .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 1.25rem; }
+
+        /* ==========================================================================
+           1. Header (timeanddate.com iconic top portal styling)
+           ========================================================================== */
+        .portal-header-top {
+            background-color: var(--bg-header-top);
+            color: var(--text-on-navy);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+        }
+        .header-top-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+        }
+        .header-top-left {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .header-top-tagline {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .header-top-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .top-time-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3px 10px;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: #f8fafc;
+        }
+        .top-time-indicator .live-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981;
+            border-radius: 50%;
+            animation: pulse-dot 1.5s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        .header-top-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #f1f5f9;
+            padding: 3px 9px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.78rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: var(--transition);
+        }
+        .header-top-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+        }
+
+        /* Main Branding Header */
+        .portal-brand-bar {
+            background: linear-gradient(180deg, var(--bg-header-top) 0%, var(--bg-nav) 100%);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .brand-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            text-decoration: none;
+        }
+        .brand-logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #13699c 0%, #009688 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .brand-text h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+        .brand-text h1 span {
+            color: #38bdf8;
+        }
+        .brand-text p {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            margin-top: 2px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        /* Top Search in Brand Bar */
+        .header-search-form {
+            flex: 1;
+            max-width: 460px;
+            position: relative;
+        }
+        .header-search-form input {
+            width: 100%;
+            height: 40px;
+            padding: 0 2.5rem 0 1rem;
+            background: #ffffff;
+            border: 1px solid transparent;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            color: #0f172a;
+            outline: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .header-search-form input:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+        }
+        .header-search-form button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-search-form button:hover {
+            color: var(--brand-blue);
+        }
+
+        /* Portal Navigation Menu (Horizontal tabs like timeanddate.com) */
+        .portal-nav-bar {
+            background-color: var(--bg-nav);
+            border-bottom: 2px solid #005a9c;
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            box-shadow: var(--shadow-md);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-links-list {
+            display: flex;
+            list-style: none;
+            gap: 2px;
+        }
+        .nav-item-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 11px 15px;
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: var(--transition);
+            cursor: pointer;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .nav-item-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .nav-item-btn.active {
+            background: #005a9c;
+            border-bottom-color: #38bdf8;
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           2. Live World Clock Strip (timeanddate.com signature)
+           ========================================================================== */
+        .world-clock-strip {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-light);
+            padding: 0.65rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        .strip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.45rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .world-clock-cards-scroll {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.65rem;
+        }
+        @media (max-width: 1024px) {
+            .world-clock-cards-scroll {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .world-clock-cards-scroll {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .strip-city-card {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 0.55rem 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .strip-city-card:hover {
+            border-color: var(--brand-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        .strip-city-card.active-user-city {
+            border-left: 3px solid #10b981;
+            background: var(--brand-blue-light);
+        }
+        .city-name-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+        .city-tz-tag {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .city-time-val {
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin: 2px 0;
+        }
+        .city-date-val {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           3. Main Hero Banner & Search Filter Strip
+           ========================================================================== */
+        .hero-banner-section {
+            background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg-body) 100%);
+            padding: 1.75rem 0 1.25rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .hero-headline {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 1.25rem auto;
+        }
+        .hero-headline h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            margin-bottom: 0.35rem;
+        }
+        .hero-headline p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Filter Pills */
+        .filter-tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+        .filter-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-pill:hover {
+            background: var(--brand-blue-light);
+            border-color: var(--brand-blue);
+            color: var(--brand-blue);
+        }
+        .filter-pill.active {
+            background: var(--brand-blue);
+            border-color: var(--brand-blue);
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           4. Tools Grid (Clean 16-Tool Portal Layout)
+           ========================================================================== */
+        .main-content-layout {
+            padding: 2rem 0 3.5rem 0;
+            flex: 1;
+        }
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 0.6rem;
+        }
+        .section-header-row h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section-badge-counter {
+            font-size: 0.8rem;
+            background: var(--brand-blue-light);
+            color: var(--brand-blue);
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+        @media (max-width: 1100px) {
+            .tools-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .tools-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 520px) {
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Tool Card */
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .tool-card:hover {
+            border-color: var(--brand-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .tool-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            transition: var(--transition);
+        }
+        .tool-card:hover::before {
+            background: var(--brand-blue);
+        }
+        .tool-card.featured-badge-card::before {
+            background: #f59e0b;
+        }
+
+        .tool-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        .tool-icon-box {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-sm);
+            background: var(--brand-blue-light);
+            color: var(--brand-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        .tool-card:hover .tool-icon-box {
+            background: var(--brand-blue);
+            color: #ffffff;
+        }
+        .tool-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            color: var(--text-muted);
+        }
+        .badge-hot {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        .badge-islamic {
+            background: #dcfce7;
+            color: #15803d;
+        }
+        .badge-popular {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .tool-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+        .tool-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .tool-live-strip {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 0.5rem 0.65rem;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+        .tool-live-strip .live-label {
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+        }
+        .tool-live-strip .live-val {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        /* ==========================================================================
+           5. Dedicated Tool View / Detail Interface
+           ========================================================================== */
+        #tool-detail-view {
+            display: none;
+            padding: 1.5rem 0 3.5rem 0;
+        }
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+        .breadcrumb-nav a {
+            color: var(--brand-blue);
+            font-weight: 600;
+        }
+        .breadcrumb-sep {
+            color: var(--border-strong);
+        }
+
+        /* Tool Detail Header */
+        .tool-view-header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .tool-view-title-area h2 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+        .tool-view-title-area p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 750px;
+        }
+        .tool-action-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .tool-btn {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-light);
+            color: var(--text-main);
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+        .tool-btn:hover {
+            border-color: var(--brand-blue);
+            color: var(--brand-blue);
+            background: var(--brand-blue-light);
+        }
+        .tool-btn-primary {
+            background: var(--brand-blue);
+            color: #ffffff;
+            border-color: var(--brand-blue);
+        }
+        .tool-btn-primary:hover {
+            background: var(--brand-blue-hover);
+            color: #ffffff;
+        }
+
+        /* Advisory Notices */
+        .notice-banner {
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.15rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+        .notice-islamic {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+        }
+        [data-theme="dark"] .notice-islamic {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+        }
+        .notice-info {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+        }
+        [data-theme="dark"] .notice-info {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: #93c5fd;
+        }
+
+        /* Tool Body 2-Column Grid */
+        .tool-workspace-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 992px) {
+            .tool-workspace-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Big Digital Result Stage */
+        .result-stage-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Digits Display */
+        .digital-countdown-panel {
+            background: linear-gradient(180deg, #0b2545 0%, #06182e 100%);
+            border-radius: var(--radius-md);
+            padding: 1.75rem 1rem;
+            color: #ffffff;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .countdown-units-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+        }
+        .digit-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .digit-number {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #38bdf8;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 0.5rem 0.85rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            min-width: 80px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .digit-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin-top: 0.4rem;
+            font-weight: 700;
+        }
+        .digit-separator {
+            font-size: 2.2rem;
+            color: #64748b;
+            font-family: var(--font-mono);
+            margin-top: -1.2rem;
+        }
+
+        /* Progress Bar */
+        .progress-bar-container {
+            margin-top: 1.25rem;
+        }
+        .progress-header-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.35rem;
+        }
+        .progress-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #10b981);
+            transition: width 0.3s ease;
+        }
+
+        /* Celebration Banner */
+        .celebration-box {
+            display: none;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            animation: bounceIn 0.6s ease;
+        }
+        .celebration-box.active {
+            display: block;
+        }
+        .celebration-box h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Breakdown Stats Table */
+        .stats-table-wrapper {
+            overflow-x: auto;
+        }
+        .time-stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .time-stats-table th, .time-stats-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .time-stats-table th {
+            background: var(--bg-card-alt);
+            color: var(--text-heading);
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .time-stats-table td.stat-val {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        /* Tool Settings Sidebar Panel */
+        .tool-sidebar-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            height: fit-content;
+        }
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.35rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            background: var(--bg-card-alt);
+            color: var(--text-main);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--brand-blue);
+            box-shadow: 0 0 0 3px var(--brand-blue-light);
+        }
+        .form-btn-submit {
+            width: 100%;
+            background: var(--brand-blue);
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .form-btn-submit:hover {
+            background: var(--brand-blue-hover);
+        }
+
+        /* Editorial & SEO Content Article */
+        .editorial-article-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            line-height: 1.7;
+        }
+        .editorial-article-box h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 0.75rem;
+        }
+        .editorial-article-box h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin: 1.25rem 0 0.5rem 0;
+        }
+        .editorial-article-box p {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .editorial-article-box ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+        .editorial-article-box li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* ==========================================================================
+           6. Specialized Tool Widgets (Time Zone, Date Duration, Age, World Clock, Stopwatch)
+           ========================================================================== */
+        
+        /* Time Zone Converter Interactive Panel */
+        .tz-converter-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .tz-picker-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .tz-picker-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tz-swap-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--border-light);
+            background: var(--bg-card-alt);
+            color: var(--brand-blue);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            align-self: center;
+            margin: 0 auto;
+        }
+        .tz-swap-btn:hover {
+            background: var(--brand-blue);
+            color: #ffffff;
+            transform: rotate(180deg);
+        }
+        .tz-result-comparison {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .tz-result-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tz-result-block h4 {
+            font-size: 1.1rem;
+            color: var(--text-heading);
+            margin-bottom: 0.4rem;
+        }
+        .tz-result-time {
+            font-family: var(--font-mono);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin-bottom: 0.25rem;
+        }
+        .tz-result-date {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+        .tz-diff-alert {
+            grid-column: 1 / -1;
+            background: var(--brand-blue-light);
+            color: var(--brand-blue);
+            padding: 0.65rem;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* 24-Hour Slider Strip */
+        .tz-timeline-strip {
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            gap: 2px;
+            background: var(--border-light);
+            padding: 3px;
+            border-radius: var(--radius-sm);
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+        .tz-hour-cell {
+            padding: 8px 2px;
+            text-align: center;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            background: var(--bg-card);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .tz-hour-cell:hover {
+            background: var(--brand-blue);
+            color: #ffffff;
+        }
+        .tz-hour-cell.business {
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+        }
+        .tz-hour-cell.active-hour {
+            background: #0284c7;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        /* Date Duration Calculator UI */
+        .duration-highlight-box {
+            background: linear-gradient(135deg, #0b2545 0%, #133a68 100%);
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        .duration-big-days {
+            font-family: var(--font-mono);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #38bdf8;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+        .duration-breakdown-text {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+        .duration-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .duration-metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .metric-card {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            text-align: center;
+        }
+        .metric-title {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .metric-value {
+            font-family: var(--font-mono);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        /* Age Calculator UI */
+        .age-hero-card {
+            background: linear-gradient(135deg, #134e4a 0%, #064e3b 100%);
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        .age-main-value {
+            font-family: var(--font-mono);
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #34d399;
+            margin-bottom: 0.5rem;
+        }
+        .age-next-bday-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 1.25rem;
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+        }
+        .age-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        @media (max-width: 650px) {
+            .age-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Stopwatch UI */
+        .stopwatch-display-panel {
+            background: #0b1120;
+            border-radius: var(--radius-md);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border: 1px solid #1e293b;
+        }
+        .stopwatch-digits {
+            font-family: var(--font-mono);
+            font-size: 4rem;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: -2px;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .stopwatch-digits {
+                font-size: 2.8rem;
+            }
+        }
+        .stopwatch-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn-stopwatch {
+            min-width: 110px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .btn-sw-start { background: #10b981; color: #ffffff; }
+        .btn-sw-start:hover { background: #059669; }
+        .btn-sw-pause { background: #f59e0b; color: #ffffff; }
+        .btn-sw-pause:hover { background: #d97706; }
+        .btn-sw-lap { background: #3b82f6; color: #ffffff; }
+        .btn-sw-lap:hover { background: #2563eb; }
+        .btn-sw-reset { background: #ef4444; color: #ffffff; }
+        .btn-sw-reset:hover { background: #dc2626; }
+
+        .laps-table-container {
+            margin-top: 1.5rem;
+            max-height: 250px;
+            overflow-y: auto;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+        }
+
+        /* World Clock Interactive Explorer Grid */
+        .wc-explorer-search {
+            margin-bottom: 1.25rem;
+        }
+        .wc-explorer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        @media (max-width: 900px) {
+            .wc-explorer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 550px) {
+            .wc-explorer-grid { grid-template-columns: 1fr; }
+        }
+        .wc-city-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .wc-city-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: var(--shadow-sm);
+        }
+        .wc-card-left h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+        .wc-card-left p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .wc-card-right {
+            text-align: right;
+        }
+        .wc-time-digits {
+            font-family: var(--font-mono);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+        .wc-offset-pill {
+            font-size: 0.72rem;
+            background: var(--bg-subtle);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           7. Footer (timeanddate.com portal links & credentials)
+           ========================================================================== */
+        .portal-footer {
+            background-color: var(--bg-header-top);
+            color: #94a3b8;
+            padding: 3rem 0 1.5rem 0;
+            border-top: 3px solid #005a9c;
+            font-size: 0.88rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .footer-brand h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+        }
+        .footer-brand p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .footer-col h5 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col a {
+            color: #94a3b8;
+            transition: var(--transition);
+        }
+        .footer-col a:hover {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.82rem;
+        }
+
+        /* Toast Popup Notification */
+        .toast-msg {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+        .toast-msg.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Static Page View (About, Contact, Privacy, Terms) */
+        #static-page-view {
+            display: none;
+            padding: 2.5rem 0 4rem 0;
+        }
+        .static-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            line-height: 1.7;
+        }
+        .static-card h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 1.25rem;
+        }
+        .static-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin: 1.75rem 0 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Top Utility Header -->
+    <header class="portal-header-top">
+        <div class="container header-top-inner">
+            <div class="header-top-left">
+                <span class="header-top-tagline"><i class="fa-solid fa-globe"></i> World's Dedicated Time, Date & Islamic Countdown Portal</span>
+            </div>
+            <div class="header-top-right">
+                <div class="top-time-indicator" id="top-live-clock">
+                    <span class="live-dot"></span>
+                    <span id="top-clock-city">Karachi</span>: <span id="top-clock-digits">--:--:--</span>
+                </div>
+                <button class="header-top-btn" id="btn-toggle-timeformat" title="Switch 12h/24h"><i class="fa-solid fa-clock-rotate-left"></i> <span id="timeformat-label">12H</span></button>
+                <button class="header-top-btn" id="btn-toggle-theme" title="Switch Dark/Light Theme"><i class="fa-solid fa-moon"></i> Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Main Portal Brand Bar -->
+    <div class="portal-brand-bar">
+        <div class="container brand-bar-inner">
+            <a href="index.html" class="brand-logo-area">
+                <div class="brand-logo-icon">
+                    <i class="fa-solid fa-hourglass-start"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>VELQORA<span>INFO</span></h1>
+                    <p>PRECISION TIME &bull; DATE &bull; COUNTDOWN HUB</p>
+                </div>
+            </a>
+
+            <!-- Quick Search Bar -->
+            <form class="header-search-form" onsubmit="event.preventDefault(); window.location.href='index.html';">
+                <input type="text" id="global-search-input" placeholder="Search 16 tools, world cities, or calculators..." autocomplete="off">
+                <button type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3. Navigation Bar (Direct links to other tools) -->
+    <nav class="portal-nav-bar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-sticky-logo" style="display:inline-flex; align-items:center; gap:0.5rem; color:#ffffff; font-weight:800; font-size:1.1rem; text-decoration:none; margin-right:1rem; white-space:nowrap;">
+                <i class="fa-solid fa-hourglass-start" style="color:#38bdf8;"></i> VELQORA
+            </a>
+            <ul class="nav-links-list">
+                <li><a href="index.html" class="nav-item-btn"><i class="fa-solid fa-grid-2"></i> All 16 Tools</a></li>
+                <li><a href="world-clock.html" class="nav-item-btn "><i class="fa-solid fa-earth-americas"></i> World Clock</a></li>
+<li><a href="timezone-converter.html" class="nav-item-btn "><i class="fa-solid fa-shuffle"></i> Interactive Time</a></li>
+<li><a href="date-duration.html" class="nav-item-btn "><i class="fa-solid fa-calendar-days"></i> Date Duration</a></li>
+<li><a href="age-calculator.html" class="nav-item-btn "><i class="fa-solid fa-cake-candles"></i> Exact Age</a></li>
+<li><a href="stopwatch.html" class="nav-item-btn "><i class="fa-solid fa-stopwatch"></i> High-Precision Online</a></li>
+<li><a href="ramadan-countdown.html" class="nav-item-btn "><i class="fa-solid fa-moon"></i> Ramadan 1448</a></li>
+<li><a href="eid-ul-fitr-countdown.html" class="nav-item-btn "><i class="fa-solid fa-star-and-crescent"></i> Eid ul-Fitr</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 4. World Clock Live Ticker Strip -->
+    <section class="world-clock-strip">
+        <div class="container">
+            <div class="strip-header">
+                <span><i class="fa-solid fa-bolt"></i> Live World Clocks (Real-Time)</span>
+                <span id="strip-sync-status"><i class="fa-solid fa-check-circle" style="color:#10b981;"></i> Synchronized</span>
+            </div>
+            <div class="world-clock-cards-scroll" id="world-clock-ticker"></div>
+        </div>
+    </section>
+
+    <!-- 5. Main Dedicated Tool Content -->
+    <main style="padding: 1.5rem 0 3.5rem 0; flex:1;">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumb-nav">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Personal & Life</span>
+                <span class="breadcrumb-sep">/</span>
+                <strong>Weekend & Friday 5 PM Kickoff Countdown</strong>
+            </div>
+
+            <!-- Tool Header Info -->
+            <div class="tool-view-header">
+                <div class="tool-view-title-area">
+                    <h2><i class="fa-solid fa-mug-hot" style="color:var(--brand-blue);"></i> Weekend & Friday 5 PM Kickoff Countdown</h2>
+                    <p>Count down the sprint hours until Friday 5:00 PM weekend kickoff or Sunday night weekly reset.</p>
+                </div>
+                <div class="tool-action-group">
+                    <button class="tool-btn" id="btn-share-tool" title="Copy share link"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                    <button class="tool-btn" id="btn-whatsapp-tool" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> WhatsApp</button>
+                    <button class="tool-btn" id="btn-sound-toggle" title="Toggle Sound Chime"><i class="fa-solid fa-volume-high"></i> Sound On</button>
+                </div>
+            </div>
+
+            <!-- Notice Banner (if any) -->
+            <div id="tool-notice-slot"></div>
+
+            <!-- Interactive Workspace -->
+            <div class="tool-workspace-grid">
+                <div class="result-stage-card" id="tool-main-stage"></div>
+                <div class="tool-sidebar-panel" id="tool-sidebar-box">
+                    <h4 class="sidebar-title"><i class="fa-solid fa-sliders"></i> Tool Settings</h4>
+                    <div id="tool-form-slot"></div>
+                </div>
+            </div>
+
+            <!-- Editorial Article for SEO -->
+            <article class="editorial-article-box" id="tool-editorial-slot" style="margin-bottom: 2.5rem;"></article>
+
+            <!-- Other Popular Tools Section (Internal Linking for SEO Ranking) -->
+            <section style="margin-top: 2.5rem;">
+                <div class="section-header-row">
+                    <h3><i class="fa-solid fa-cubes" style="color:var(--brand-blue);"></i> Explore Other High-Precision Tools</h3>
+                    <a href="index.html" style="font-size:0.85rem; font-weight:700;">View All 16 Tools &rarr;</a>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1rem;">
+                    
+            <a href="world-clock.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-earth-americas"></i></div>
+                    <span class="tool-badge badge-popular">Time & Clock</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">World Clock & Local Times Explorer</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Check live local time across 30+ major world cities including Karachi, London, New York, T...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="timezone-converter.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-shuffle"></i></div>
+                    <span class="tool-badge badge-popular">Time & Clock</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Interactive Time Zone Converter & Meeting Planner</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Effortlessly convert times between UTC, PKT, EST, GMT, GST, PST, and IST. Visual 24-hour b...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="date-duration.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-calendar-days"></i></div>
+                    <span class="tool-badge badge-popular">High-Search</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Date Duration & Business Days Calculator</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Calculate exact days, weeks, months, and business working days between two calendar dates....</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="age-calculator.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-cake-candles"></i></div>
+                    <span class="tool-badge badge-popular">High-Search</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Exact Age & Milestone Birthday Calculator</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Calculate your exact age in years, months, days, hours, minutes, and live ticking seconds....</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="stopwatch.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-stopwatch"></i></div>
+                    <span class="tool-badge badge-popular">High-Search</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">High-Precision Online Stopwatch & Lap Timer</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Free millisecond-accuracy digital stopwatch with start, pause, split lap recording, and re...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="ramadan-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-moon"></i></div>
+                    <span class="tool-badge badge-popular">Islamic</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Ramadan 1448 AH Fasting Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Live countdown to the 1st of Ramadan 1448 AH. Includes Ruet-e-Hilal moon sighting advisori...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="eid-ul-fitr-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-star-and-crescent"></i></div>
+                    <span class="tool-badge badge-popular">Islamic</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Eid ul-Fitr & Chand Raat Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Live countdown to 1st Shawwal celebrating the conclusion of Ramadan. Accurate moon-sightin...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="eid-ul-adha-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-kaaba"></i></div>
+                    <span class="tool-badge badge-popular">Islamic</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Eid ul-Adha & Sacred Qurbani Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Precision timer counting down to 10th Dhul Hijjah, the blessed days of Eid ul-Adha, Qurban...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="hajj-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-mosque"></i></div>
+                    <span class="tool-badge badge-popular">Islamic</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Sacred Hajj Pilgrimage Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Live countdown to the 8th of Dhul Hijjah (Yawm at-Tarwiyah) through the grand standing on ...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="new-year-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Global New Year 2027 Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Accurate live countdown to January 1st midnight with real-time year progress percentage, r...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="birthday-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-gift"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Personal Birthday Countdown Timer</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Track exact days, hours, minutes, and seconds until your next birthday. Automatically roll...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="payday-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-wallet"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Monthly Payday & Salary Arrival Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Track exactly how many hours and working days remain until your next salary arrives in you...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="retirement-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Retirement Horizon & Workdays Calculator</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Calculate the exact remaining years, months, and Monday-to-Friday working business days un...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="life-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Life Perspective (Stoic Memento Mori Calculator)</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Stoic perspective calculator visualizing weeks lived versus milestone target age. Inspired...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+            <a href="custom-event-countdown.html" class="tool-card" style="text-decoration:none; color:inherit;">
+                <div class="tool-card-top">
+                    <div class="tool-icon-box"><i class="fa-solid fa-calendar-plus"></i></div>
+                    <span class="tool-badge badge-popular">Personal & Life</span>
+                </div>
+                <h4 class="tool-title" style="margin-bottom:0.25rem;">Custom Event & Milestone Countdown</h4>
+                <p class="tool-desc" style="font-size:0.8rem; margin-bottom:0.5rem;">Create a free, shareable precision countdown timer for any product launch, exam, wedding, ...</p>
+                <div style="font-size:0.8rem; font-weight:700; color:var(--brand-blue); display:flex; align-items:center; gap:0.35rem;">Open Tool <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>VELQORA TIME & DATE</h4>
+                    <p>Velqora Info (https://velqorainfo.vercel.app) is an online precision timekeeping authority offering world clocks, instant time zone conversion, calendar calculations, and real-time event countdowns.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Top Calculators</h5>
+                    <ul>
+                        <li><a href="world-clock.html">World Clock</a></li>
+                        <li><a href="timezone-converter.html">Time Zone Converter</a></li>
+                        <li><a href="date-duration.html">Date Duration Calculator</a></li>
+                        <li><a href="age-calculator.html">Exact Age Calculator</a></li>
+                        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Islamic & Countdowns</h5>
+                    <ul>
+                        <li><a href="ramadan-countdown.html">Ramadan Countdown</a></li>
+                        <li><a href="eid-ul-fitr-countdown.html">Eid ul-Fitr Countdown</a></li>
+                        <li><a href="eid-ul-adha-countdown.html">Eid ul-Adha Countdown</a></li>
+                        <li><a href="hajj-countdown.html">Hajj Pilgrimage Timer</a></li>
+                        <li><a href="new-year-countdown.html">New Year 2027 Countdown</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Quick Navigation</h5>
+                    <ul>
+                        <li><a href="birthday-countdown.html">Birthday Countdown</a></li>
+                        <li><a href="payday-countdown.html">Payday Tracker</a></li>
+                        <li><a href="retirement-countdown.html">Retirement Countdown</a></li>
+                        <li><a href="weekend-countdown.html">Weekend Countdown</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026-2027 Velqora Info. All Rights Reserved.</span>
+                <span>Contact: misterjojo215@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-msg"><i class="fa-solid fa-circle-info"></i> <span id="toast-text">Message</span></div>
+
+    <!-- Canvas Confetti -->
+    <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:99999; display:none;"></canvas>
+
+    <script>
+        /* ==========================================================================
+           1. Core Constants & 16 Professional Tools Registry
+           ========================================================================== */
+        
+        // 16 Tools Registry (The last 5 weak/fuzul tools have been replaced with
+        // highest-searched tools worldwide: World Clock, Time Zone Converter,
+        // Date Duration Calculator, Exact Age Calculator, and Precision Stopwatch!)
+        const TOOLS_REGISTRY = [
+            // HIGH SEARCH VOLUME REPLACEMENTS & ESSENTIALS
+            {
+                id: "world-clock",
+                name: "World Clock & Local Times",
+                icon: "fa-earth-americas",
+                category: "Time & Clock",
+                badge: "Top Searched",
+                badgeClass: "badge-hot",
+                desc: "Live real-time local time across 30+ major international cities with day/night and UTC offsets.",
+                keywords: ["world clock", "current time", "london time", "new york time", "dubai time", "karachi time", "what time is it"]
+            },
+            {
+                id: "timezone-converter",
+                name: "Time Zone Converter & Planner",
+                icon: "fa-shuffle",
+                category: "Time & Clock",
+                badge: "Top Searched",
+                badgeClass: "badge-hot",
+                desc: "Convert times between UTC, PKT, EST, GMT, GST, PST, and IST. Interactive 24-hour visual meeting timeline.",
+                keywords: ["time zone converter", "est to pkt", "pst to gmt", "convert time", "meeting planner"]
+            },
+            {
+                id: "date-duration",
+                name: "Date Duration & Days Calculator",
+                icon: "fa-calendar-days",
+                category: "High-Search",
+                badge: "High Traffic",
+                badgeClass: "badge-hot",
+                desc: "Calculate exact days, weeks, months, and business working days between two selected calendar dates.",
+                keywords: ["date duration", "days between dates", "how many days", "business days", "working days calculator"]
+            },
+            {
+                id: "age-calculator",
+                name: "Exact Age & Birthday Calculator",
+                icon: "fa-cake-candles",
+                category: "High-Search",
+                badge: "Top Searched",
+                badgeClass: "badge-hot",
+                desc: "Calculate exact age in years, months, days, minutes, and live ticking seconds, next birthday, and weekday born.",
+                keywords: ["age calculator", "calculate age", "how old am i", "next birthday", "date of birth"]
+            },
+            {
+                id: "stopwatch",
+                name: "Online Stopwatch & Lap Timer",
+                icon: "fa-stopwatch",
+                category: "High-Search",
+                badge: "Productivity",
+                badgeClass: "badge-popular",
+                desc: "Millisecond-precision digital stopwatch with start, pause, split lap recording, and export features.",
+                keywords: ["stopwatch", "timer", "lap timer", "chronometer", "online stopwatch"]
+            },
+
+            // ISLAMIC SACRED TIMERS (Accurate Astronomical Lunar Projections)
+            {
+                id: "ramadan",
+                name: "Ramadan 1448 Countdown",
+                icon: "fa-moon",
+                category: "Islamic",
+                badge: "Islamic",
+                badgeClass: "badge-islamic",
+                desc: "Live countdown to 1st Ramadan fasting month with official Hilal moon sighting advisory & adjustable dates.",
+                keywords: ["ramadan", "ramzan", "fasting", "roza", "islamic calendar", "sehri", "iftar"]
+            },
+            {
+                id: "eid-ul-fitr",
+                name: "Eid ul-Fitr Countdown",
+                icon: "fa-star-and-crescent",
+                category: "Islamic",
+                badge: "Islamic",
+                badgeClass: "badge-islamic",
+                desc: "Countdown to 1st Shawwal celebrating completion of the Holy Month of Ramadan. Chand Raat tracking.",
+                keywords: ["eid", "eid ul fitr", "meethi eid", "shawwal", "chand raat"]
+            },
+            {
+                id: "eid-ul-adha",
+                name: "Eid ul-Adha & Qurbani Countdown",
+                icon: "fa-kaaba",
+                category: "Islamic",
+                badge: "Islamic",
+                badgeClass: "badge-islamic",
+                desc: "Precision countdown to 10th Dhul Hijjah and the sacred days of Qurbani & Sunnah of Ibrahim.",
+                keywords: ["eid ul adha", "bakra eid", "qurbani", "dhul hijjah", "sacrifice"]
+            },
+            {
+                id: "hajj",
+                name: "Hajj Pilgrimage Countdown",
+                icon: "fa-mosque",
+                category: "Islamic",
+                badge: "Islamic",
+                badgeClass: "badge-islamic",
+                desc: "Sacred annual pilgrimage in Makkah countdown (8th to 12th Dhul Hijjah rites and Day of Arafah).",
+                keywords: ["hajj", "pilgrimage", "makkah", "arafah", "mina", "kaaba"]
+            },
+
+            // ANNUAL, WORK & PERSONAL MILESTONES
+            {
+                id: "new-year",
+                name: "New Year 2027 Countdown",
+                icon: "fa-champagne-glasses",
+                category: "Personal & Life",
+                badge: "Global Event",
+                badgeClass: "badge-popular",
+                desc: "Live countdown to January 1st midnight with full year-progress percentage bar and remaining hours.",
+                keywords: ["new year", "january 1", "2027 countdown", "new year eve"]
+            },
+            {
+                id: "birthday",
+                name: "Birthday Countdown Timer",
+                icon: "fa-gift",
+                category: "Personal & Life",
+                badge: "Milestone",
+                badgeClass: "badge-popular",
+                desc: "Countdown to your upcoming birthday, days left, and upcoming age celebration with audio chime.",
+                keywords: ["birthday countdown", "my birthday", "birthday timer", "turning 25"]
+            },
+            {
+                id: "payday",
+                name: "Payday & Salary Countdown",
+                icon: "fa-wallet",
+                category: "Personal & Life",
+                badge: "Finance",
+                badgeClass: "badge-popular",
+                desc: "Track the exact days and business hours remaining until your next paycheck or monthly salary arrives.",
+                keywords: ["payday", "salary", "paycheck countdown", "monthly income"]
+            },
+            {
+                id: "retirement",
+                name: "Retirement Countdown Calculator",
+                icon: "fa-umbrella-beach",
+                category: "Personal & Life",
+                badge: "Career",
+                badgeClass: "badge-popular",
+                desc: "Track remaining career years, months, and exact working business days (Mon-Fri) until retirement.",
+                keywords: ["retirement", "career countdown", "working days left", "pension"]
+            },
+            {
+                id: "weekend",
+                name: "Weekend & Friday Countdown",
+                icon: "fa-mug-hot",
+                category: "Personal & Life",
+                badge: "Daily",
+                badgeClass: "badge-popular",
+                desc: "Count down the sprint hours until Friday 5:00 PM weekend kickoff or Sunday night weekly reset.",
+                keywords: ["weekend countdown", "friday 5pm", "work week", "sunday reset"]
+            },
+            {
+                id: "life-countdown",
+                name: "Life Perspective (Stoic Calculator)",
+                icon: "fa-hourglass-half",
+                category: "Personal & Life",
+                badge: "Stoic Insight",
+                badgeClass: "badge-popular",
+                desc: "Perspective calculator visualizing weeks lived vs. target milestone age based on Stoic Memento Mori.",
+                keywords: ["life calculator", "memento mori", "four thousand weeks", "weeks left"]
+            },
+            {
+                id: "custom-event",
+                name: "Custom Event & Meeting Countdown",
+                icon: "fa-calendar-plus",
+                category: "Personal & Life",
+                badge: "Customizable",
+                badgeClass: "badge-popular",
+                desc: "Create a tailored countdown for any meeting, product launch, exam, wedding, or flight departure.",
+                keywords: ["custom countdown", "meeting timer", "event launch", "deadline tracker"]
+            }
+        ];
+
+        /* Major World Cities for Live Strip & World Clock Explorer */
+        const WORLD_CITIES = [
+            { name: "Karachi / Islamabad", country: "Pakistan", tz: "Asia/Karachi", offset: 5, tag: "PKT (UTC+5)" },
+            { name: "London", country: "United Kingdom", tz: "Europe/London", offset: 0, tag: "GMT/BST (UTC+0)" },
+            { name: "New York", country: "United States", tz: "America/New_York", offset: -5, tag: "EST (UTC-5)" },
+            { name: "Dubai", country: "United Arab Emirates", tz: "Asia/Dubai", offset: 4, tag: "GST (UTC+4)" },
+            { name: "Tokyo", country: "Japan", tz: "Asia/Tokyo", offset: 9, tag: "JST (UTC+9)" },
+            { name: "Sydney", country: "Australia", tz: "Australia/Sydney", offset: 11, tag: "AEDT (UTC+11)" },
+            { name: "Riyadh / Makkah", country: "Saudi Arabia", tz: "Asia/Riyadh", offset: 3, tag: "AST (UTC+3)" },
+            { name: "Singapore", country: "Singapore", tz: "Asia/Singapore", offset: 8, tag: "SGT (UTC+8)" },
+            { name: "Paris / Berlin", country: "France/Germany", tz: "Europe/Paris", offset: 1, tag: "CET (UTC+1)" },
+            { name: "Los Angeles", country: "United States", tz: "America/Los_Angeles", offset: -8, tag: "PST (UTC-8)" },
+            { name: "Toronto", country: "Canada", tz: "America/Toronto", offset: -5, tag: "EST (UTC-5)" },
+            { name: "Istanbul", country: "Turkey", tz: "Europe/Istanbul", offset: 3, tag: "TRT (UTC+3)" }
+        ];
+
+        /* State Variables */
+        let activeToolId = null;
+        let activeCountdownInterval = null;
+        let is24HourFormat = localStorage.getItem("velqora_24h") === "true";
+        let isSoundEnabled = localStorage.getItem("velqora_sound") !== "false";
+        let userTimezone = "Asia/Karachi";
+        
+        // Stopwatch State
+        let swStartTime = 0;
+        let swElapsedTime = 0;
+        let swTimerInterval = null;
+        let swLaps = [];
+
+        /* ==========================================================================
+           2. Initialization & Navigation
+           ========================================================================== */
+        window.addEventListener("DOMContentLoaded", () => {
+            initTheme();
+            initTimeFormat();
+            renderWorldClockStrip();
+            renderToolsGrid(TOOLS_REGISTRY);
+            startGlobalTicker();
+
+            // Hash Routing
+            const hash = window.location.hash.replace("#", "").trim();
+            if (hash) {
+                const found = TOOLS_REGISTRY.find(t => t.id === hash);
+                if (found) {
+                    openTool(hash);
+                } else if (["about", "contact", "privacy", "terms"].includes(hash)) {
+                    openStatic(hash);
+                }
+            }
+
+            // Bind sound toggle button
+            const soundBtn = document.getElementById("btn-sound-toggle");
+            if (soundBtn) {
+                updateSoundButtonUI();
+                soundBtn.onclick = () => {
+                    isSoundEnabled = !isSoundEnabled;
+                    localStorage.setItem("velqora_sound", isSoundEnabled);
+                    updateSoundButtonUI();
+                    showToast(isSoundEnabled ? "Chime sound enabled" : "Chime sound muted");
+                };
+            }
+
+            // Bind share buttons
+            const shareBtn = document.getElementById("btn-share-tool");
+            if (shareBtn) {
+                shareBtn.onclick = () => {
+                    const url = window.location.origin + window.location.pathname + "#" + (activeToolId || "");
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(url).then(() => showToast("Shareable link copied to clipboard!"));
+                    } else {
+                        showToast("Link: " + url);
+                    }
+                };
+            }
+
+            const waBtn = document.getElementById("btn-whatsapp-tool");
+            if (waBtn) {
+                waBtn.onclick = () => {
+                    const t = TOOLS_REGISTRY.find(x => x.id === activeToolId);
+                    const title = t ? t.name : "Velqora Time & Date Hub";
+                    const url = window.location.origin + window.location.pathname + "#" + (activeToolId || "");
+                    const text = encodeURIComponent(`*${title}* - Check accurate live countdown & time utility on Velqora:\n${url}`);
+                    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+                };
+            }
+        });
+
+        function updateSoundButtonUI() {
+            const btn = document.getElementById("btn-sound-toggle");
+            if (!btn) return;
+            btn.innerHTML = isSoundEnabled ? `<i class="fa-solid fa-volume-high"></i> Sound On` : `<i class="fa-solid fa-volume-xmark"></i> Sound Muted`;
+        }
+
+        /* View Router */
+        function navigateTo(viewName) {
+            document.getElementById("home-view").style.display = (viewName === "home") ? "block" : "none";
+            document.getElementById("tool-detail-view").style.display = (viewName === "tool") ? "block" : "none";
+            document.getElementById("static-page-view").style.display = (viewName === "static") ? "block" : "none";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+
+            if (viewName === "home") {
+                window.location.hash = "";
+                activeToolId = null;
+                if (activeCountdownInterval) clearInterval(activeCountdownInterval);
+            }
+        }
+
+        /* Theme Manager */
+        function initTheme() {
+            const saved = localStorage.getItem("velqora_theme") || "light";
+            document.documentElement.setAttribute("data-theme", saved);
+            document.getElementById("btn-toggle-theme").onclick = () => {
+                const current = document.documentElement.getAttribute("data-theme");
+                const next = current === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", next);
+                localStorage.setItem("velqora_theme", next);
+                showToast(`Switched to ${next} mode`);
+            };
+        }
+
+        /* 12h / 24h Time Format Manager */
+        function initTimeFormat() {
+            const btn = document.getElementById("btn-toggle-timeformat");
+            const lbl = document.getElementById("timeformat-label");
+            lbl.textContent = is24HourFormat ? "24H" : "12H";
+
+            btn.onclick = () => {
+                is24HourFormat = !is24HourFormat;
+                localStorage.setItem("velqora_24h", is24HourFormat);
+                lbl.textContent = is24HourFormat ? "24H" : "12H";
+                showToast(`Display set to ${is24HourFormat ? "24-Hour" : "12-Hour AM/PM"} format`);
+                renderWorldClockStrip();
+            };
+        }
+
+        /* Toast Feedback */
+        function showToast(text) {
+            const toast = document.getElementById("toast");
+            const toastText = document.getElementById("toast-text");
+            toastText.textContent = text;
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 3200);
+        }
+
+        /* Audio Chime Synthesizer (Native Web Audio API) */
+        function playChime() {
+            if (!isSoundEnabled) return;
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                const ctx = new AudioCtx();
+                const now = ctx.currentTime;
+                [523.25, 659.25, 783.99, 1046.50].forEach((freq, idx) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(freq, now + (idx * 0.12));
+                    gain.gain.setValueAtTime(0, now + (idx * 0.12));
+                    gain.gain.linearRampToValueAtTime(0.2, now + (idx * 0.12) + 0.03);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + (idx * 0.12) + 0.6);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now + (idx * 0.12));
+                    osc.stop(now + (idx * 0.12) + 0.6);
+                });
+            } catch (e) {
+                console.warn("Audio chime prevented:", e);
+            }
+        }
+
+        /* ==========================================================================
+           3. Real-Time Ticker & World Clock Strip (timeanddate signature)
+           ========================================================================== */
+        function getCityTime(tz) {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString("en-US", {
+                timeZone: tz,
+                hour12: !is24HourFormat,
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
+            const dateStr = now.toLocaleDateString("en-US", {
+                timeZone: tz,
+                weekday: "short",
+                month: "short",
+                day: "numeric"
+            });
+            return { timeStr, dateStr };
+        }
+
+        function renderWorldClockStrip() {
+            const container = document.getElementById("world-clock-ticker");
+            if (!container) return;
+            const topSix = WORLD_CITIES.slice(0, 6);
+
+            container.innerHTML = topSix.map(c => {
+                const { timeStr, dateStr } = getCityTime(c.tz);
+                const isUser = (c.tz === userTimezone);
+                return `
+                    <div class="strip-city-card ${isUser ? 'active-user-city' : ''}" onclick="openTool('world-clock')">
+                        <div class="city-name-row">
+                            <span>${c.name.split("/")[0]}</span>
+                            <span class="city-tz-tag">${c.tag.split(" ")[0]}</span>
+                        </div>
+                        <div class="city-time-val" id="strip-time-${c.tz.replace(/\//g, '_')}">${timeStr}</div>
+                        <div class="city-date-val" id="strip-date-${c.tz.replace(/\//g, '_')}">${dateStr}</div>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function startGlobalTicker() {
+            setInterval(() => {
+                // 1. Top bar indicator (Karachi)
+                const topClockDigits = document.getElementById("top-clock-digits");
+                if (topClockDigits) {
+                    const { timeStr } = getCityTime("Asia/Karachi");
+                    topClockDigits.textContent = timeStr;
+                }
+
+                // 2. World Clock Strip
+                WORLD_CITIES.slice(0, 6).forEach(c => {
+                    const elTime = document.getElementById(`strip-time-${c.tz.replace(/\//g, '_')}`);
+                    const elDate = document.getElementById(`strip-date-${c.tz.replace(/\//g, '_')}`);
+                    if (elTime && elDate) {
+                        const { timeStr, dateStr } = getCityTime(c.tz);
+                        elTime.textContent = timeStr;
+                        elDate.textContent = dateStr;
+                    }
+                });
+
+                // 3. Mini Timers on Tools Grid (if on home view)
+                updateGridMiniTimers();
+            }, 1000);
+        }
+
+        function updateGridMiniTimers() {
+            const isl = getAstronomicalIslamicDates();
+            const now = new Date();
+
+            // Quick live mini updates on cards
+            const targets = {
+                "new-year": new Date(`${now.getFullYear() + 1}-01-01T00:00:00+05:00`),
+                "ramadan": isl.ramadan,
+                "eid-ul-fitr": isl.eidFitr,
+                "eid-ul-adha": isl.eidAdha,
+                "hajj": isl.hajj
+            };
+
+            for (const [id, tDate] of Object.entries(targets)) {
+                const el = document.getElementById(`mini-val-${id}`);
+                if (el) {
+                    const diff = tDate.getTime() - Date.now();
+                    if (diff > 0) {
+                        const days = Math.floor(diff / 86400000);
+                        const hours = Math.floor((diff % 86400000) / 3600000);
+                        el.textContent = `${days}d ${hours}h left`;
+                    } else {
+                        el.textContent = "Celebrated!";
+                    }
+                }
+            }
+        }
+
+        /* ==========================================================================
+           4. Tools Grid Rendering & Filtering
+           ========================================================================== */
+        function renderToolsGrid(tools) {
+            const container = document.getElementById("tools-grid-container");
+            const countLabel = document.getElementById("visible-tools-count");
+            if (!container) return;
+
+            countLabel.textContent = `${tools.length} Tools Available`;
+            if (tools.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px dashed var(--border-light);">
+                        <i class="fa-solid fa-search" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--text-heading);">No tools found matching your search</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Try searching for "World Clock", "Age", "Ramadan", or "Time Zone".</p>
+                        <button class="filter-pill active" style="margin-top: 1rem;" onclick="filterCategory('all', this)">View All 16 Tools</button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = tools.map(t => {
+                const isSpecial = ["world-clock", "timezone-converter", "date-duration", "age-calculator"].includes(t.id);
+                return `
+                    <article class="tool-card ${isSpecial ? 'featured-badge-card' : ''}" onclick="openTool('${t.id}')">
+                        <div>
+                            <div class="tool-card-top">
+                                <div class="tool-icon-box"><i class="fa-solid ${t.icon}"></i></div>
+                                <span class="tool-badge ${t.badgeClass || ''}">${t.badge}</span>
+                            </div>
+                            <h3 class="tool-title">${t.name}</h3>
+                            <p class="tool-desc">${t.desc}</p>
+                        </div>
+                        <div>
+                            <div class="tool-live-strip">
+                                <span class="live-label"><i class="fa-regular fa-clock"></i> Status</span>
+                                <span class="live-val" id="mini-val-${t.id}">Active & Live</span>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+
+            updateGridMiniTimers();
+        }
+
+        function filterCategory(cat, btnEl) {
+            document.querySelectorAll(".filter-pill, .nav-item-btn").forEach(b => b.classList.remove("active"));
+            if (btnEl) btnEl.classList.add("active");
+
+            if (cat === "all") {
+                renderToolsGrid(TOOLS_REGISTRY);
+            } else if (cat === "High-Search") {
+                const highSearchIds = ["world-clock", "timezone-converter", "date-duration", "age-calculator", "stopwatch"];
+                renderToolsGrid(TOOLS_REGISTRY.filter(t => highSearchIds.includes(t.id)));
+            } else {
+                renderToolsGrid(TOOLS_REGISTRY.filter(t => t.category === cat));
+            }
+
+            navigateTo("home");
+        }
+
+        function handleGlobalSearch() {
+            const query = document.getElementById("global-search-input").value.trim().toLowerCase();
+            if (!query) {
+                renderToolsGrid(TOOLS_REGISTRY);
+                return;
+            }
+            navigateTo("home");
+
+            const filtered = TOOLS_REGISTRY.filter(t => {
+                const matchName = t.name.toLowerCase().includes(query);
+                const matchDesc = t.desc.toLowerCase().includes(query);
+                const matchKeywords = t.keywords.some(k => k.toLowerCase().includes(query));
+                return matchName || matchDesc || matchKeywords;
+            });
+            renderToolsGrid(filtered);
+        }
+
+        document.getElementById("global-search-input").addEventListener("input", (e) => {
+            const val = e.target.value.trim().toLowerCase();
+            if (!val) {
+                renderToolsGrid(TOOLS_REGISTRY);
+            } else {
+                const filtered = TOOLS_REGISTRY.filter(t => {
+                    return t.name.toLowerCase().includes(val) || 
+                           t.desc.toLowerCase().includes(val) ||
+                           t.keywords.some(k => k.toLowerCase().includes(val));
+                });
+                renderToolsGrid(filtered);
+            }
+        });
+
+        /* ==========================================================================
+           5. Dedicated Tool Controller (Dynamic Setup for all 16 Tools)
+           ========================================================================== */
+        function openTool(toolId) {
+            const tool = TOOLS_REGISTRY.find(t => t.id === toolId);
+            if (!tool) return;
+            activeToolId = toolId;
+            window.location.hash = toolId;
+            navigateTo("tool");
+
+            if (activeCountdownInterval) clearInterval(activeCountdownInterval);
+
+            // Breadcrumbs & Header
+            document.getElementById("breadcrumb-category").textContent = tool.category;
+            document.getElementById("breadcrumb-tool-title").textContent = tool.name;
+            document.getElementById("tool-header-title").innerHTML = `<i class="fa-solid ${tool.icon}" style="color:var(--brand-blue);"></i> ${tool.name}`;
+            document.getElementById("tool-header-desc").textContent = tool.desc;
+
+            // Notice Banners
+            const noticeSlot = document.getElementById("tool-notice-slot");
+            noticeSlot.innerHTML = "";
+            if (["ramadan", "eid-ul-fitr", "eid-ul-adha", "hajj"].includes(toolId)) {
+                noticeSlot.innerHTML = `
+                    <div class="notice-banner notice-islamic">
+                        <i class="fa-solid fa-moon" style="font-size:1.3rem;"></i>
+                        <div>
+                            <strong>Hilal Moon Sighting (Central Ruet-e-Hilal Advisory):</strong> Islamic dates depend strictly on the physical sighting of the lunar crescent in Pakistan, Saudi Arabia, and regional moon sighting authorities. Dates displayed are astronomical estimates subject to &plusmn;1-2 days lunar confirmation. You can adjust the expected target date in the settings panel.
+                        </div>
+                    </div>
+                `;
+            } else if (toolId === "life-countdown") {
+                noticeSlot.innerHTML = `
+                    <div class="notice-banner notice-info">
+                        <i class="fa-solid fa-shield-halved" style="font-size:1.3rem;"></i>
+                        <div>
+                            <strong>Stoic Perspective & Analytical Tool Only:</strong> This calculator provides an arithmetic reflection of time based on Oliver Burkeman's <em>Four Thousand Weeks</em>. It holds zero medical, biological, or prognostic validity and does NOT predict human lifespan.
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Launch Tool Interface
+            setupToolInterface(toolId);
+        }
+
+        /* Astronomical Dates Helper for Islamic Tools */
+        function getAstronomicalIslamicDates() {
+            // High precision estimated dates for 2027 Hijri year 1448 AH
+            return {
+                ramadan: new Date("2027-02-08T00:00:00+05:00"),
+                eidFitr: new Date("2027-03-10T00:00:00+05:00"),
+                eidAdha: new Date("2027-05-16T00:00:00+05:00"),
+                hajj: new Date("2027-05-14T00:00:00+05:00")
+            };
+        }
+
+        /* Setup Interactive Views for Each Tool */
+        function setupToolInterface(toolId) {
+            const stage = document.getElementById("tool-main-stage");
+            const formSlot = document.getElementById("tool-form-slot");
+            const editorial = document.getElementById("tool-editorial-slot");
+            const isl = getAstronomicalIslamicDates();
+            const now = new Date();
+            const y = now.getFullYear();
+
+            // 1. WORLD CLOCK TOOL
+            if (toolId === "world-clock") {
+                stage.innerHTML = `
+                    <div class="wc-explorer-search">
+                        <input type="text" id="wc-search-box" class="form-control" placeholder="Search world city (e.g. London, Dubai, New York, Tokyo)..." style="font-size:1rem; padding:0.8rem 1rem;">
+                    </div>
+                    <div class="wc-explorer-grid" id="wc-grid-cards">
+                        <!-- City Clocks Injected dynamically -->
+                    </div>
+                `;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Time Display Format:</label>
+                        <select id="wc-select-format" class="form-control">
+                            <option value="12" ${!is24HourFormat ? 'selected' : ''}>12-Hour AM/PM Format</option>
+                            <option value="24" ${is24HourFormat ? 'selected' : ''}>24-Hour Military Format</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Base Local Reference City:</label>
+                        <select id="wc-base-city" class="form-control">
+                            <option value="Asia/Karachi" selected>Karachi / Islamabad (PKT, UTC+5)</option>
+                            <option value="Europe/London">London (GMT, UTC+0)</option>
+                            <option value="America/New_York">New York (EST, UTC-5)</option>
+                            <option value="Asia/Dubai">Dubai (GST, UTC+4)</option>
+                        </select>
+                    </div>
+                    <button class="form-btn-submit" onclick="renderWorldClockExplorer()"><i class="fa-solid fa-rotate"></i> Refresh Clocks</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>About the Global World Clock Explorer</h2>
+                    <p>The Velqora World Clock provides instant, microsecond-accurate local time across all major global business and cultural hubs. Based on standard IANA timezone databases, our system synchronizes seamlessly without server roundtrips.</p>
+                    <h3>Why accurate time zones matter</h3>
+                    <ul>
+                        <li><strong>Global Remote Work & Freelancing:</strong> Know when clients in London, New York, or Sydney start their business day.</li>
+                        <li><strong>Stock Market Openings:</strong> Track NYSE, London Stock Exchange, and Tokyo Nikkei operating hours.</li>
+                        <li><strong>International Travel & Flight Scheduling:</strong> Stay aligned across multiple time boundaries.</li>
+                    </ul>
+                `;
+
+                document.getElementById("wc-select-format").onchange = (e) => {
+                    is24HourFormat = (e.target.value === "24");
+                    renderWorldClockExplorer();
+                };
+                document.getElementById("wc-base-city").onchange = (e) => {
+                    userTimezone = e.target.value;
+                    renderWorldClockExplorer();
+                };
+
+                renderWorldClockExplorer();
+                activeCountdownInterval = setInterval(updateWorldClockExplorerTimes, 1000);
+            }
+
+            // 2. TIME ZONE CONVERTER TOOL
+            else if (toolId === "timezone-converter") {
+                stage.innerHTML = `
+                    <div class="tz-converter-box">
+                        <div class="tz-picker-row">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">From City / Time Zone:</label>
+                                <select id="tz-from" class="form-control">
+                                    ${WORLD_CITIES.map(c => `<option value="${c.tz}" ${c.tz === 'Asia/Karachi' ? 'selected' : ''}>${c.name} (${c.tag})</option>`).join("")}
+                                </select>
+                            </div>
+                            <button class="tz-swap-btn" id="btn-tz-swap" title="Swap Timezones"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">To City / Time Zone:</label>
+                                <select id="tz-to" class="form-control">
+                                    ${WORLD_CITIES.map(c => `<option value="${c.tz}" ${c.tz === 'America/New_York' ? 'selected' : ''}>${c.name} (${c.tag})</option>`).join("")}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="tz-result-comparison">
+                            <div class="tz-result-block">
+                                <h4 id="tz-label-from">Karachi Time</h4>
+                                <div class="tz-result-time" id="tz-val-from">--:--</div>
+                                <div class="tz-result-date" id="tz-date-from">--</div>
+                            </div>
+                            <div class="tz-result-block">
+                                <h4 id="tz-label-to">New York Time</h4>
+                                <div class="tz-result-time" id="tz-val-to">--:--</div>
+                                <div class="tz-result-date" id="tz-date-to">--</div>
+                            </div>
+                            <div class="tz-diff-alert" id="tz-diff-text">Calculated difference</div>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-heading); margin-bottom:0.4rem;">Interactive 24-Hour Visual Schedule Planner:</h4>
+                            <div class="tz-timeline-strip" id="tz-timeline-grid"></div>
+                            <div style="display:flex; gap:1.5rem; font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;">
+                                <span><i class="fa-solid fa-square" style="color:#dcfce7;"></i> Standard Business Hours (9 AM - 5 PM)</span>
+                                <span><i class="fa-solid fa-square" style="color:#0284c7;"></i> Selected Hour</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Select Date:</label>
+                        <input type="date" id="tz-input-date" class="form-control" value="${new Date().toISOString().slice(0, 10)}">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Select Time (Source City):</label>
+                        <input type="time" id="tz-input-time" class="form-control" value="14:00">
+                    </div>
+                    <button class="form-btn-submit" onclick="computeTimeZoneConversion()"><i class="fa-solid fa-bolt"></i> Convert Now</button>
+                `;
+
+                editorial.innerHTML = `
+                    <h2>Professional Time Zone Conversion & Meeting Scheduling</h2>
+                    <p>Managing global conferences across conflicting time boundaries requires accurate offset conversion. This tool prevents embarrassing missed video calls, client deadlines, and scheduling conflicts.</p>
+                    <h3>Understanding UTC & Standard Offsets</h3>
+                    <p>Coordinated Universal Time (UTC) serves as the primary time standard across Earth. While Pakistan operates at UTC+5 year-round with zero daylight saving changes, cities in North America and Europe transition between standard and daylight saving time (DST).</p>
+                `;
+
+                document.getElementById("btn-tz-swap").onclick = () => {
+                    const fromSel = document.getElementById("tz-from");
+                    const toSel = document.getElementById("tz-to");
+                    const tmp = fromSel.value;
+                    fromSel.value = toSel.value;
+                    toSel.value = tmp;
+                    computeTimeZoneConversion();
+                };
+
+                document.getElementById("tz-from").onchange = computeTimeZoneConversion;
+                document.getElementById("tz-to").onchange = computeTimeZoneConversion;
+                document.getElementById("tz-input-date").onchange = computeTimeZoneConversion;
+                document.getElementById("tz-input-time").onchange = computeTimeZoneConversion;
+
+                computeTimeZoneConversion();
+            }
+
+            // 3. DATE DURATION CALCULATOR TOOL
+            else if (toolId === "date-duration") {
+                stage.innerHTML = `
+                    <div class="duration-highlight-box">
+                        <div class="duration-big-days" id="dur-total-days">--</div>
+                        <div class="duration-breakdown-text" id="dur-breakdown">Calculating duration...</div>
+                    </div>
+
+                    <div class="duration-metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-title">Business / Working Days</div>
+                            <div class="metric-value" id="dur-workdays">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Weekend Days (Sat/Sun)</div>
+                            <div class="metric-value" id="dur-weekends">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Weeks & Days</div>
+                            <div class="metric-value" id="dur-weeks">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Hours Elapsed</div>
+                            <div class="metric-value" id="dur-hours">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Minutes</div>
+                            <div class="metric-value" id="dur-mins">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">% of Current Year</div>
+                            <div class="metric-value" id="dur-pct">--%</div>
+                        </div>
+                    </div>
+                `;
+
+                const d1 = new Date();
+                const d2 = new Date();
+                d2.setDate(d2.getDate() + 90);
+
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Start Date:</label>
+                        <input type="date" id="dur-start-date" class="form-control" value="${d1.toISOString().slice(0, 10)}">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">End Date:</label>
+                        <input type="date" id="dur-end-date" class="form-control" value="${d2.toISOString().slice(0, 10)}">
+                    </div>
+                    <div class="form-group" style="display:flex; align-items:center; gap:0.5rem;">
+                        <input type="checkbox" id="dur-include-end" style="width:18px; height:18px;">
+                        <label for="dur-include-end" style="font-size:0.88rem; font-weight:600; cursor:pointer;">Include End Day (+1 Day)</label>
+                    </div>
+                    <button class="form-btn-submit" onclick="computeDateDuration()"><i class="fa-solid fa-calculator"></i> Calculate Duration</button>
+                `;
+
+                editorial.innerHTML = `
+                    <h2>About the Date Duration & Day Difference Calculator</h2>
+                    <p>Inspired by timeanddate.com's famous Date Duration engine, this tool computes exact mathematical intervals between any two calendar days on the Gregorian calendar.</p>
+                    <h3>High-Utility Real World Applications</h3>
+                    <ul>
+                        <li><strong>Project Management & Milestones:</strong> Accurately calculate billable sprint days and client delivery deadlines.</li>
+                        <li><strong>Contract & Tenancy Durations:</strong> Verify notice periods, rental terms, and employment probation windows.</li>
+                        <li><strong>Event Planning:</strong> Know exactly how many days remain until weddings, visa expirations, or examinations.</li>
+                    </ul>
+                `;
+
+                document.getElementById("dur-start-date").onchange = computeDateDuration;
+                document.getElementById("dur-end-date").onchange = computeDateDuration;
+                document.getElementById("dur-include-end").onchange = computeDateDuration;
+
+                computeDateDuration();
+            }
+
+            // 4. EXACT AGE CALCULATOR TOOL
+            else if (toolId === "age-calculator") {
+                stage.innerHTML = `
+                    <div class="age-hero-card">
+                        <div style="font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; color:#a7f3d0; margin-bottom:0.25rem;">Your Exact Chronological Age</div>
+                        <div class="age-main-value" id="age-main-text">-- Years, -- Months, -- Days</div>
+                        <div class="age-next-bday-box" id="age-bday-countdown">
+                            <i class="fa-solid fa-cake-candles" style="color:#fbbf24; margin-right:0.4rem;"></i> Next Birthday In: <strong id="age-bday-ticking">--</strong>
+                        </div>
+                    </div>
+
+                    <div class="age-stats-grid">
+                        <div class="metric-card">
+                            <div class="metric-title">Day You Were Born</div>
+                            <div class="metric-value" id="age-weekday" style="font-size:1.15rem;">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Western Zodiac Sign</div>
+                            <div class="metric-value" id="age-zodiac" style="font-size:1.15rem;">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Chinese Lunar Animal</div>
+                            <div class="metric-value" id="age-chinese" style="font-size:1.15rem;">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Days Lived</div>
+                            <div class="metric-value" id="age-total-days">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Weeks Lived</div>
+                            <div class="metric-value" id="age-total-weeks">--</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Total Minutes Lived</div>
+                            <div class="metric-value" id="age-total-mins">--</div>
+                        </div>
+                    </div>
+                `;
+
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Date of Birth (DOB):</label>
+                        <input type="date" id="age-dob-input" class="form-control" value="2000-01-15">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Calculate Age As Of:</label>
+                        <input type="date" id="age-asof-input" class="form-control" value="${new Date().toISOString().slice(0, 10)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="computeExactAge()"><i class="fa-solid fa-rotate-right"></i> Recalculate Age</button>
+                `;
+
+                editorial.innerHTML = `
+                    <h2>The Science of Chronological Age Calculation</h2>
+                    <p>Age calculation requires accounting for leap years, variable calendar month lengths (28, 29, 30, and 31 days), and rotational time elapsed. Our engine resolves exact Gregorian calendar increments rather than inaccurate 365-day approximations.</p>
+                    <h3>Zodiac & Birthday Milestones</h3>
+                    <p>Discover which day of the week you arrived on Earth, your astronomical Western Sun sign, and your Eastern Chinese zodiac sign based on lunar cycles.</p>
+                `;
+
+                document.getElementById("age-dob-input").onchange = computeExactAge;
+                document.getElementById("age-asof-input").onchange = computeExactAge;
+
+                computeExactAge();
+                activeCountdownInterval = setInterval(updateAgeTickingSeconds, 1000);
+            }
+
+            // 5. ONLINE STOPWATCH TOOL
+            else if (toolId === "stopwatch") {
+                stage.innerHTML = `
+                    <div class="stopwatch-display-panel">
+                        <div class="stopwatch-digits" id="sw-digits">00:00:00.00</div>
+                        <div class="stopwatch-controls">
+                            <button class="btn-stopwatch btn-sw-start" id="sw-btn-start" onclick="toggleStopwatch()"><i class="fa-solid fa-play"></i> Start</button>
+                            <button class="btn-stopwatch btn-sw-lap" id="sw-btn-lap" onclick="recordStopwatchLap()" disabled><i class="fa-solid fa-flag"></i> Lap</button>
+                            <button class="btn-stopwatch btn-sw-reset" id="sw-btn-reset" onclick="resetStopwatch()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <h4 style="font-size:1.05rem; font-weight:700; color:var(--text-heading); margin-bottom:0.5rem;"><i class="fa-solid fa-list-ol"></i> Recorded Laps & Splits</h4>
+                        <div class="laps-table-container">
+                            <table class="time-stats-table" id="sw-laps-table">
+                                <thead>
+                                    <tr>
+                                        <th>Lap #</th>
+                                        <th>Split Time</th>
+                                        <th>Total Overall Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="sw-laps-body">
+                                    <tr><td colspan="3" style="text-align:center; color:var(--text-muted);">No laps recorded yet. Press Start and click Lap.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Precision Display Mode:</label>
+                        <select id="sw-precision-select" class="form-control">
+                            <option value="100" selected>Centiseconds (1/100th second)</option>
+                            <option value="10">Deciseconds (1/10th second)</option>
+                            <option value="1000">Standard Seconds</option>
+                        </select>
+                    </div>
+                    <button class="form-btn-submit" onclick="clearStopwatchLaps()"><i class="fa-solid fa-trash"></i> Clear All Laps</button>
+                `;
+
+                editorial.innerHTML = `
+                    <h2>High-Precision Online Digital Stopwatch</h2>
+                    <p>Designed for athletics, high-intensity interval training (HIIT), cooking, speech timing, and studying sprints (Pomodoro technique). Runs entirely within high-resolution browser performance clocks (performance.now()).</p>
+                `;
+
+                resetStopwatch();
+            }
+
+            // 6. ISLAMIC & STANDARD COUNTDOWNS (New Year, Ramadan, Eid ul-Fitr, Eid ul-Adha, Hajj, Birthday, Payday, Retirement, Weekend, Life, Custom)
+            else {
+                // Generic Standard Digital Countdown Frame
+                stage.innerHTML = `
+                    <div class="celebration-box" id="celebrate-banner">
+                        <h3><i class="fa-solid fa-party-horn"></i> Milestone Reached!</h3>
+                        <p id="celebrate-text">The scheduled target moment has arrived. Congratulations!</p>
+                    </div>
+
+                    <div class="digital-countdown-panel">
+                        <div class="countdown-units-flex">
+                            <div class="digit-group">
+                                <div class="digit-number" id="d-days">00</div>
+                                <div class="digit-label">Days</div>
+                            </div>
+                            <div class="digit-separator">:</div>
+                            <div class="digit-group">
+                                <div class="digit-number" id="d-hours">00</div>
+                                <div class="digit-label">Hours</div>
+                            </div>
+                            <div class="digit-separator">:</div>
+                            <div class="digit-group">
+                                <div class="digit-number" id="d-mins">00</div>
+                                <div class="digit-label">Minutes</div>
+                            </div>
+                            <div class="digit-separator">:</div>
+                            <div class="digit-group">
+                                <div class="digit-number" id="d-secs">00</div>
+                                <div class="digit-label">Seconds</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container">
+                            <div class="progress-header-info">
+                                <span>Progress Elapsed</span>
+                                <span id="progress-pct-label">0.0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" id="progress-fill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <h4 style="font-size:1.05rem; font-weight:700; color:var(--text-heading); margin-bottom:0.75rem;"><i class="fa-solid fa-chart-simple"></i> Comprehensive Time Breakdown</h4>
+                        <div class="stats-table-wrapper">
+                            <table class="time-stats-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Target Date & Time</td>
+                                        <td class="stat-val" id="stat-target-dt">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Remaining Weeks & Days</td>
+                                        <td class="stat-val" id="stat-weeks-days">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Remaining Hours</td>
+                                        <td class="stat-val" id="stat-total-hours">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Remaining Minutes</td>
+                                        <td class="stat-val" id="stat-total-mins">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Remaining Seconds</td>
+                                        <td class="stat-val" id="stat-total-secs">--</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+
+                // Specialized Target Date Calculation & Form Logic
+                setupCountdownLogic(toolId);
+            }
+        }
+
+        /* Logic for Countdown Tools */
+        let activeTargetDate = null;
+        let activeStartDate = null;
+        let activeHasCelebrated = false;
+
+        function setupCountdownLogic(toolId) {
+            const formSlot = document.getElementById("tool-form-slot");
+            const editorial = document.getElementById("tool-editorial-slot");
+            const isl = getAstronomicalIslamicDates();
+            const now = new Date();
+            const y = now.getFullYear();
+
+            activeHasCelebrated = false;
+
+            if (toolId === "new-year") {
+                activeTargetDate = new Date(`${y + 1}-01-01T00:00:00+05:00`);
+                activeStartDate = new Date(`${y}-01-01T00:00:00+05:00`);
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Target New Year:</label>
+                        <input type="number" id="ny-year-input" class="form-control" value="${y + 1}" min="2027" max="2050">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateNewYearTarget()"><i class="fa-solid fa-check"></i> Set Target Year</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Global New Year Countdown</h2>
+                    <p>Track the seconds remaining until midnight January 1st in Asia/Karachi (PKT, UTC+5) and around the world. As the year progresses, the percentage completion bar tracks your year goals.</p>
+                `;
+            }
+            else if (toolId === "ramadan") {
+                activeTargetDate = isl.ramadan;
+                activeStartDate = new Date(activeTargetDate.getTime() - (30 * 86400000));
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Expected 1st Ramadan Date:</label>
+                        <input type="date" id="isl-date-input" class="form-control" value="${isl.ramadan.toISOString().slice(0, 10)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateIslamicTarget()"><i class="fa-solid fa-moon"></i> Update Ramadan Date</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Ramadan Fasting & Moon Sighting Projections</h2>
+                    <p>Ramadan is the ninth and sacred month of the Islamic Hijri calendar, marked by fasting (Sawm) from dawn until dusk, Taraweeh prayers, and spiritual devotion. Dates depend on the physical sighting of the crescent moon confirmed by the Central Ruet-e-Hilal Committee.</p>
+                `;
+            }
+            else if (toolId === "eid-ul-fitr") {
+                activeTargetDate = isl.eidFitr;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Expected Eid ul-Fitr Date (1st Shawwal):</label>
+                        <input type="date" id="isl-date-input" class="form-control" value="${isl.eidFitr.toISOString().slice(0, 10)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateIslamicTarget()"><i class="fa-solid fa-star-and-crescent"></i> Update Eid Date</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Celebrating Eid ul-Fitr (Festival of Fast-Breaking)</h2>
+                    <p>Eid ul-Fitr marks the triumphant completion of Ramadan. Observed with the special Eid prayer, morning charity (Zakat al-Fitr), and joyous family gatherings.</p>
+                `;
+            }
+            else if (toolId === "eid-ul-adha") {
+                activeTargetDate = isl.eidAdha;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Expected Eid ul-Adha Date (10th Dhul Hijjah):</label>
+                        <input type="date" id="isl-date-input" class="form-control" value="${isl.eidAdha.toISOString().slice(0, 10)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateIslamicTarget()"><i class="fa-solid fa-kaaba"></i> Update Eid Date</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Eid ul-Adha & Sunnah of Qurbani</h2>
+                    <p>Commemorating Prophet Ibrahim's sacrifice, Eid ul-Adha begins on the 10th of Dhul Hijjah following the grand gathering of Hajj on Mount Arafat.</p>
+                `;
+            }
+            else if (toolId === "hajj") {
+                activeTargetDate = isl.hajj;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Expected Hajj Start (8th Dhul Hijjah):</label>
+                        <input type="date" id="isl-date-input" class="form-control" value="${isl.hajj.toISOString().slice(0, 10)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateIslamicTarget()"><i class="fa-solid fa-mosque"></i> Update Hajj Date</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Hajj Pilgrimage Timeline</h2>
+                    <p>Hajj rites commence on the 8th of Dhul Hijjah in Mina through the sacred standing on the plains of Arafah on the 9th of Dhul Hijjah.</p>
+                `;
+            }
+            else if (toolId === "birthday") {
+                const bdayDate = new Date(y, 11, 25, 0, 0, 0); // default
+                activeTargetDate = (now > bdayDate) ? new Date(y + 1, 11, 25, 0, 0, 0) : bdayDate;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Your Month & Day of Birth:</label>
+                        <input type="date" id="bday-input-date" class="form-control" value="2000-12-25">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateBirthdayTarget()"><i class="fa-solid fa-cake-candles"></i> Set Birthday Timer</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Personal Birthday Countdown</h2>
+                    <p>Automatically rolls over year after year so you can always anticipate your next birthday celebration with family and friends.</p>
+                `;
+            }
+            else if (toolId === "payday") {
+                const p = new Date(y, now.getMonth(), 28, 0, 0, 0);
+                activeTargetDate = (now > p) ? new Date(y, now.getMonth() + 1, 28, 0, 0, 0) : p;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Payday Day of Month:</label>
+                        <select id="payday-day-select" class="form-control">
+                            <option value="1">1st of Month</option>
+                            <option value="15">15th of Month</option>
+                            <option value="25">25th of Month</option>
+                            <option value="28" selected>28th of Month</option>
+                            <option value="last">Last Day of Month</option>
+                        </select>
+                    </div>
+                    <button class="form-btn-submit" onclick="updatePaydayTarget()"><i class="fa-solid fa-wallet"></i> Set Payday</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Monthly Salary & Payday Tracker</h2>
+                    <p>Track exactly how many hours remain until your hard-earned salary arrives in your account.</p>
+                `;
+            }
+            else if (toolId === "weekend") {
+                // Friday 5 PM
+                const day = now.getDay();
+                const dFri = (5 - day + 7) % 7;
+                const t = new Date(now);
+                t.setDate(now.getDate() + (dFri === 0 && now.getHours() >= 17 ? 7 : dFri));
+                t.setHours(17, 0, 0, 0);
+                activeTargetDate = t;
+                activeStartDate = new Date(now);
+                activeStartDate.setDate(now.getDate() - ((day + 6) % 7)); // Monday 9am
+                activeStartDate.setHours(9, 0, 0, 0);
+
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Target Milestone:</label>
+                        <select id="weekend-mode" class="form-control">
+                            <option value="fri" selected>Friday 5:00 PM (Weekend Kickoff)</option>
+                            <option value="sun">Sunday Midnight (Weekly Reset)</option>
+                        </select>
+                    </div>
+                    <button class="form-btn-submit" onclick="updateWeekendTarget()"><i class="fa-solid fa-mug-hot"></i> Apply Mode</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Work-Week Sprint & Weekend Balance</h2>
+                    <p>Sprint through your week's productive goals and see real-time hours left until leisure and rejuvenation.</p>
+                `;
+            }
+            else if (toolId === "retirement") {
+                activeTargetDate = new Date(y + 15, 5, 30, 17, 0, 0);
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Planned Retirement Date:</label>
+                        <input type="date" id="ret-date-input" class="form-control" value="${y + 15}-06-30">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateRetirementTarget()"><i class="fa-solid fa-umbrella-beach"></i> Update Retirement</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Career Horizon & Retirement Planning</h2>
+                    <p>Visualizing your remaining career horizon empowers financial planning, pension contributions, and future lifestyle readiness.</p>
+                `;
+            }
+            else if (toolId === "life-countdown") {
+                activeTargetDate = new Date(y + 45, 0, 1, 0, 0, 0);
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Your Date of Birth:</label>
+                        <input type="date" id="life-dob" class="form-control" value="1995-01-01">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Target Milestone Age (Years):</label>
+                        <input type="number" id="life-age" class="form-control" value="80" min="40" max="120">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateLifeTarget()"><i class="fa-solid fa-hourglass"></i> Recalculate Perspective</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>The Stoic Value of Time Awareness (Memento Mori)</h2>
+                    <p>From Seneca to Marcus Aurelius, stoic philosophers taught that recognizing the finite nature of time leads to profound gratitude, prioritized living, and intentional action.</p>
+                `;
+            }
+            else {
+                // Custom Event Countdown
+                const def = new Date();
+                def.setDate(def.getDate() + 14);
+                activeTargetDate = def;
+                formSlot.innerHTML = `
+                    <div class="form-group">
+                        <label class="form-label">Event Name / Title:</label>
+                        <input type="text" id="cust-title" class="form-control" value="My Special Milestone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Target Date & Time:</label>
+                        <input type="datetime-local" id="cust-datetime" class="form-control" value="${new Date(def.getTime() - (def.getTimezoneOffset() * 60000)).toISOString().slice(0, 16)}">
+                    </div>
+                    <button class="form-btn-submit" onclick="updateCustomTarget()"><i class="fa-solid fa-play"></i> Start Custom Timer</button>
+                `;
+                editorial.innerHTML = `
+                    <h2>Versatile Custom Event Timekeeping</h2>
+                    <p>Create a shareable precision countdown for product launches, university thesis submissions, family celebrations, or sports matches.</p>
+                `;
+            }
+
+            // Start Ticking
+            tickActiveCountdown();
+            activeCountdownInterval = setInterval(tickActiveCountdown, 1000);
+        }
+
+        function updateNewYearTarget() {
+            const yr = parseInt(document.getElementById("ny-year-input").value, 10) || 2027;
+            activeTargetDate = new Date(`${yr}-01-01T00:00:00+05:00`);
+            activeStartDate = new Date(`${yr - 1}-01-01T00:00:00+05:00`);
+            tickActiveCountdown();
+            showToast("New Year target updated!");
+        }
+
+        function updateIslamicTarget() {
+            const val = document.getElementById("isl-date-input").value;
+            if (val) {
+                activeTargetDate = new Date(`${val}T00:00:00+05:00`);
+                tickActiveCountdown();
+                showToast("Islamic target date updated!");
+            }
+        }
+
+        function updateBirthdayTarget() {
+            const val = document.getElementById("bday-input-date").value;
+            if (val) {
+                const now = new Date();
+                const [by, bm, bd] = val.split("-").map(Number);
+                let t = new Date(now.getFullYear(), bm - 1, bd, 0, 0, 0);
+                if (now > t) t = new Date(now.getFullYear() + 1, bm - 1, bd, 0, 0, 0);
+                activeTargetDate = t;
+                tickActiveCountdown();
+                showToast("Birthday timer updated!");
+            }
+        }
+
+        function updatePaydayTarget() {
+            const mode = document.getElementById("payday-day-select").value;
+            const now = new Date();
+            let d = 28;
+            if (mode === "last") {
+                d = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            } else {
+                d = parseInt(mode, 10);
+            }
+            let t = new Date(now.getFullYear(), now.getMonth(), d, 0, 0, 0);
+            if (now > t) t = new Date(now.getFullYear(), now.getMonth() + 1, d, 0, 0, 0);
+            activeTargetDate = t;
+            tickActiveCountdown();
+            showToast("Payday target updated!");
+        }
+
+        function updateWeekendTarget() {
+            const mode = document.getElementById("weekend-mode").value;
+            const now = new Date();
+            const day = now.getDay();
+            const t = new Date(now);
+            if (mode === "sun") {
+                const dSun = (7 - day) % 7;
+                t.setDate(now.getDate() + (dSun === 0 ? 7 : dSun));
+                t.setHours(23, 59, 59, 0);
+            } else {
+                const dFri = (5 - day + 7) % 7;
+                t.setDate(now.getDate() + (dFri === 0 && now.getHours() >= 17 ? 7 : dFri));
+                t.setHours(17, 0, 0, 0);
+            }
+            activeTargetDate = t;
+            tickActiveCountdown();
+            showToast("Weekend target mode updated!");
+        }
+
+        function updateRetirementTarget() {
+            const val = document.getElementById("ret-date-input").value;
+            if (val) {
+                activeTargetDate = new Date(`${val}T17:00:00+05:00`);
+                tickActiveCountdown();
+                showToast("Retirement date updated!");
+            }
+        }
+
+        function updateLifeTarget() {
+            const dob = document.getElementById("life-dob").value;
+            const age = parseInt(document.getElementById("life-age").value, 10) || 80;
+            if (dob) {
+                const [by, bm, bd] = dob.split("-").map(Number);
+                activeStartDate = new Date(dob);
+                activeTargetDate = new Date(by + age, bm - 1, bd, 0, 0, 0);
+                tickActiveCountdown();
+                showToast("Perspective recalculated!");
+            }
+        }
+
+        function updateCustomTarget() {
+            const title = document.getElementById("cust-title").value.trim() || "Custom Event";
+            const dt = document.getElementById("cust-datetime").value;
+            if (dt) {
+                activeTargetDate = new Date(dt);
+                document.getElementById("tool-header-title").innerHTML = `<i class="fa-solid fa-calendar-plus" style="color:var(--brand-blue);"></i> ${title}`;
+                tickActiveCountdown();
+                showToast("Custom event timer started!");
+            }
+        }
+
+        function tickActiveCountdown() {
+            if (!activeTargetDate) return;
+            const now = new Date();
+            const diff = activeTargetDate.getTime() - now.getTime();
+
+            const dDays = document.getElementById("d-days");
+            const dHours = document.getElementById("d-hours");
+            const dMins = document.getElementById("d-mins");
+            const dSecs = document.getElementById("d-secs");
+            if (!dDays) return;
+
+            if (diff <= 0) {
+                dDays.textContent = "00";
+                dHours.textContent = "00";
+                dMins.textContent = "00";
+                dSecs.textContent = "00";
+                document.getElementById("celebrate-banner").classList.add("active");
+                if (!activeHasCelebrated) {
+                    activeHasCelebrated = true;
+                    playChime();
+                    triggerConfetti();
+                }
+                return;
+            }
+
+            document.getElementById("celebrate-banner").classList.remove("active");
+
+            const totalSecs = Math.floor(diff / 1000);
+            const days = Math.floor(totalSecs / 86400);
+            const hours = Math.floor((totalSecs % 86400) / 3600);
+            const mins = Math.floor((totalSecs % 3600) / 60);
+            const secs = totalSecs % 60;
+
+            dDays.textContent = String(days).padStart(2, "0");
+            dHours.textContent = String(hours).padStart(2, "0");
+            dMins.textContent = String(mins).padStart(2, "0");
+            dSecs.textContent = String(secs).padStart(2, "0");
+
+            // Progress Bar
+            if (activeStartDate && activeTargetDate > activeStartDate) {
+                const totalDur = activeTargetDate.getTime() - activeStartDate.getTime();
+                const elapsed = now.getTime() - activeStartDate.getTime();
+                const pct = Math.min(100, Math.max(0, (elapsed / totalDur) * 100)).toFixed(1);
+                document.getElementById("progress-fill-bar").style.width = pct + "%";
+                document.getElementById("progress-pct-label").textContent = pct + "%";
+            } else {
+                document.getElementById("progress-fill-bar").style.width = "100%";
+                document.getElementById("progress-pct-label").textContent = "100% Active";
+            }
+
+            // Stats Table
+            document.getElementById("stat-target-dt").textContent = activeTargetDate.toLocaleString("en-US", {
+                weekday: "long", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit"
+            });
+            document.getElementById("stat-weeks-days").textContent = `${Math.floor(days / 7)} Weeks, ${days % 7} Days`;
+            document.getElementById("stat-total-hours").textContent = (Math.floor(totalSecs / 3600)).toLocaleString() + " hrs";
+            document.getElementById("stat-total-mins").textContent = (Math.floor(totalSecs / 60)).toLocaleString() + " mins";
+            document.getElementById("stat-total-secs").textContent = totalSecs.toLocaleString() + " secs";
+        }
+
+        /* ==========================================================================
+           6. Specialized Tool Engines (World Clock Explorer, Time Zone, Date Duration, Age, Stopwatch)
+           ========================================================================== */
+
+        /* World Clock Explorer Engine */
+        function renderWorldClockExplorer() {
+            const grid = document.getElementById("wc-grid-cards");
+            if (!grid) return;
+            const searchVal = (document.getElementById("wc-search-box") ? document.getElementById("wc-search-box").value.trim().toLowerCase() : "");
+
+            const filtered = WORLD_CITIES.filter(c => {
+                return c.name.toLowerCase().includes(searchVal) || 
+                       c.country.toLowerCase().includes(searchVal) ||
+                       c.tag.toLowerCase().includes(searchVal);
+            });
+
+            grid.innerHTML = filtered.map(c => {
+                const { timeStr, dateStr } = getCityTime(c.tz);
+                return `
+                    <div class="wc-city-card">
+                        <div class="wc-card-left">
+                            <h4>${c.name}</h4>
+                            <p>${c.country} &bull; <span class="wc-offset-pill">${c.tag}</span></p>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">${dateStr}</p>
+                        </div>
+                        <div class="wc-card-right">
+                            <div class="wc-time-digits" id="wc-live-${c.tz.replace(/\//g, '_')}">${timeStr}</div>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+
+            const searchInput = document.getElementById("wc-search-box");
+            if (searchInput && !searchInput.dataset.bound) {
+                searchInput.dataset.bound = "true";
+                searchInput.addEventListener("input", renderWorldClockExplorer);
+            }
+        }
+
+        function updateWorldClockExplorerTimes() {
+            WORLD_CITIES.forEach(c => {
+                const el = document.getElementById(`wc-live-${c.tz.replace(/\//g, '_')}`);
+                if (el) {
+                    const { timeStr } = getCityTime(c.tz);
+                    el.textContent = timeStr;
+                }
+            });
+        }
+
+        /* Time Zone Converter Engine */
+        function computeTimeZoneConversion() {
+            const fromTz = document.getElementById("tz-from").value;
+            const toTz = document.getElementById("tz-to").value;
+            const dateStr = document.getElementById("tz-input-date").value;
+            const timeStr = document.getElementById("tz-input-time").value;
+
+            if (!dateStr || !timeStr) return;
+
+            // Construct reference date
+            const dtString = `${dateStr}T${timeStr}:00`;
+            const baseDate = new Date(dtString);
+
+            // Format in both zones
+            const fromCity = WORLD_CITIES.find(c => c.tz === fromTz) || { name: "Source", offset: 0 };
+            const toCity = WORLD_CITIES.find(c => c.tz === toTz) || { name: "Target", offset: 0 };
+
+            document.getElementById("tz-label-from").textContent = fromCity.name;
+            document.getElementById("tz-label-to").textContent = toCity.name;
+
+            // Compute offset difference
+            const diffHours = toCity.offset - fromCity.offset;
+            const diffSign = diffHours >= 0 ? `+${diffHours}` : `${diffHours}`;
+            document.getElementById("tz-diff-text").innerHTML = `<i class="fa-solid fa-circle-info"></i> ${toCity.name} is <strong>${Math.abs(diffHours)} hours ${diffHours >= 0 ? 'ahead of' : 'behind'}</strong> ${fromCity.name} (${diffSign} hrs difference).`;
+
+            // Display Times
+            const [h, m] = timeStr.split(":").map(Number);
+            let toH = (h + diffHours) % 24;
+            let dayShift = 0;
+            if (toH < 0) { toH += 24; dayShift = -1; }
+            if (h + diffHours >= 24) { dayShift = 1; }
+
+            const toHStr = String(toH).padStart(2, "0");
+            const toMStr = String(m).padStart(2, "0");
+
+            document.getElementById("tz-val-from").textContent = `${timeStr} (Source)`;
+            document.getElementById("tz-date-from").textContent = dateStr;
+
+            document.getElementById("tz-val-to").textContent = `${toHStr}:${toMStr} ${dayShift !== 0 ? (dayShift > 0 ? '(+1 Day)' : '(-1 Day)') : ''}`;
+            const targetDateObj = new Date(baseDate);
+            targetDateObj.setDate(targetDateObj.getDate() + dayShift);
+            document.getElementById("tz-date-to").textContent = targetDateObj.toISOString().slice(0, 10);
+
+            // Render 24h timeline
+            const timeline = document.getElementById("tz-timeline-grid");
+            if (timeline) {
+                let cells = "";
+                for (let hr = 0; hr < 24; hr++) {
+                    const isBusiness = (hr >= 9 && hr <= 17);
+                    const isSelected = (hr === h);
+                    const hrLabel = is24HourFormat ? `${hr}:00` : `${(hr % 12) || 12}${hr >= 12 ? 'p' : 'a'}`;
+                    cells += `<div class="tz-hour-cell ${isBusiness ? 'business' : ''} ${isSelected ? 'active-hour' : ''}" onclick="selectTimelineHour(${hr})">${hrLabel}</div>`;
+                }
+                timeline.innerHTML = cells;
+            }
+        }
+
+        function selectTimelineHour(hr) {
+            const timeInput = document.getElementById("tz-input-time");
+            if (timeInput) {
+                timeInput.value = `${String(hr).padStart(2, "0")}:00`;
+                computeTimeZoneConversion();
+            }
+        }
+
+        /* Date Duration Engine */
+        function computeDateDuration() {
+            const sVal = document.getElementById("dur-start-date").value;
+            const eVal = document.getElementById("dur-end-date").value;
+            const includeEnd = document.getElementById("dur-include-end").checked;
+            if (!sVal || !eVal) return;
+
+            const d1 = new Date(sVal);
+            const d2 = new Date(eVal);
+
+            let diffMs = d2.getTime() - d1.getTime();
+            let isReversed = false;
+            if (diffMs < 0) {
+                isReversed = true;
+                diffMs = Math.abs(diffMs);
+            }
+
+            let totalDays = Math.floor(diffMs / 86400000);
+            if (includeEnd) totalDays += 1;
+
+            document.getElementById("dur-total-days").textContent = `${totalDays.toLocaleString()} Days`;
+
+            // Breakdown (Years, Months, Days)
+            const [y1, m1, day1] = sVal.split("-").map(Number);
+            const [y2, m2, day2] = eVal.split("-").map(Number);
+            let yDiff = Math.abs(y2 - y1);
+            let mDiff = Math.abs(m2 - m1);
+            let daysRem = Math.abs(day2 - day1);
+
+            document.getElementById("dur-breakdown").textContent = `${totalDays} calendar days (${Math.floor(totalDays / 7)} weeks & ${totalDays % 7} days)${isReversed ? ' (End date is before start date)' : ''}`;
+
+            // Calculate business work days (Monday through Friday)
+            let workDays = 0;
+            let weekendDays = 0;
+            const cur = new Date(Math.min(d1.getTime(), d2.getTime()));
+            const maxDays = totalDays;
+            for (let i = 0; i < maxDays; i++) {
+                const dayOfWeek = cur.getDay();
+                if (dayOfWeek === 0 || dayOfWeek === 6) {
+                    weekendDays++;
+                } else {
+                    workDays++;
+                }
+                cur.setDate(cur.getDate() + 1);
+            }
+
+            document.getElementById("dur-workdays").textContent = workDays.toLocaleString();
+            document.getElementById("dur-weekends").textContent = weekendDays.toLocaleString();
+            document.getElementById("dur-weeks").textContent = `${Math.floor(totalDays / 7)}w ${totalDays % 7}d`;
+            document.getElementById("dur-hours").textContent = (totalDays * 24).toLocaleString() + " hrs";
+            document.getElementById("dur-mins").textContent = (totalDays * 24 * 60).toLocaleString() + " mins";
+            document.getElementById("dur-pct").textContent = ((totalDays / 365.25) * 100).toFixed(1) + "%";
+        }
+
+        /* Exact Age Calculator Engine */
+        let cachedDob = null;
+        function computeExactAge() {
+            const dobVal = document.getElementById("age-dob-input").value;
+            const asOfVal = document.getElementById("age-asof-input").value;
+            if (!dobVal || !asOfVal) return;
+
+            cachedDob = dobVal;
+            const dob = new Date(dobVal);
+            const asOf = new Date(asOfVal);
+
+            if (dob > asOf) {
+                showToast("Date of Birth cannot be in the future of 'As Of' date!");
+                return;
+            }
+
+            let years = asOf.getFullYear() - dob.getFullYear();
+            let months = asOf.getMonth() - dob.getMonth();
+            let days = asOf.getDate() - dob.getDate();
+
+            if (days < 0) {
+                months -= 1;
+                const prevMonth = new Date(asOf.getFullYear(), asOf.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            if (months < 0) {
+                years -= 1;
+                months += 12;
+            }
+
+            document.getElementById("age-main-text").textContent = `${years} Years, ${months} Months, ${days} Days`;
+
+            // Weekday born
+            const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.getElementById("age-weekday").textContent = weekdays[dob.getDay()];
+
+            // Zodiac
+            document.getElementById("age-zodiac").textContent = getWesternZodiac(dob.getMonth() + 1, dob.getDate());
+            document.getElementById("age-chinese").textContent = getChineseZodiac(dob.getFullYear());
+
+            // Totals
+            const totalMs = asOf.getTime() - dob.getTime();
+            const totalDays = Math.floor(totalMs / 86400000);
+            document.getElementById("age-total-days").textContent = totalDays.toLocaleString();
+            document.getElementById("age-total-weeks").textContent = (Math.floor(totalDays / 7)).toLocaleString();
+            document.getElementById("age-total-mins").textContent = (Math.floor(totalMs / 60000)).toLocaleString();
+
+            updateAgeTickingSeconds();
+        }
+
+        function updateAgeTickingSeconds() {
+            if (!cachedDob) return;
+            const el = document.getElementById("age-bday-ticking");
+            if (!el) return;
+
+            const now = new Date();
+            const [by, bm, bd] = cachedDob.split("-").map(Number);
+            let nextBday = new Date(now.getFullYear(), bm - 1, bd, 0, 0, 0);
+            if (now > nextBday) nextBday = new Date(now.getFullYear() + 1, bm - 1, bd, 0, 0, 0);
+
+            const diff = nextBday.getTime() - now.getTime();
+            const days = Math.floor(diff / 86400000);
+            const hours = Math.floor((diff % 86400000) / 3600000);
+            const mins = Math.floor((diff % 3600000) / 60000);
+            const secs = Math.floor((diff % 60000) / 1000);
+
+            el.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+        }
+
+        function getWesternZodiac(month, day) {
+            const signs = [
+                { sign: "Capricorn (Dec 22 - Jan 19)", end: 19 },
+                { sign: "Aquarius (Jan 20 - Feb 18)", end: 18 },
+                { sign: "Pisces (Feb 19 - Mar 20)", end: 20 },
+                { sign: "Aries (Mar 21 - Apr 19)", end: 19 },
+                { sign: "Taurus (Apr 20 - May 20)", end: 20 },
+                { sign: "Gemini (May 21 - Jun 20)", end: 20 },
+                { sign: "Cancer (Jun 21 - Jul 22)", end: 22 },
+                { sign: "Leo (Jul 23 - Aug 22)", end: 22 },
+                { sign: "Virgo (Aug 23 - Sep 22)", end: 22 },
+                { sign: "Libra (Sep 23 - Oct 22)", end: 22 },
+                { sign: "Scorpio (Oct 23 - Nov 21)", end: 21 },
+                { sign: "Sagittarius (Nov 22 - Dec 21)", end: 21 },
+                { sign: "Capricorn (Dec 22 - Jan 19)", end: 31 }
+            ];
+            return day <= signs[month - 1].end ? signs[month - 1].sign : signs[month].sign;
+        }
+
+        function getChineseZodiac(year) {
+            const animals = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
+            return animals[(year - 4) % 12];
+        }
+
+        /* Stopwatch Engine */
+        function toggleStopwatch() {
+            const btn = document.getElementById("sw-btn-start");
+            const lapBtn = document.getElementById("sw-btn-lap");
+            if (!swTimerInterval) {
+                // Start
+                swStartTime = performance.now() - swElapsedTime;
+                swTimerInterval = setInterval(updateStopwatchDisplay, 10);
+                btn.innerHTML = `<i class="fa-solid fa-pause"></i> Pause`;
+                btn.className = "btn-stopwatch btn-sw-pause";
+                lapBtn.disabled = false;
+            } else {
+                // Pause
+                clearInterval(swTimerInterval);
+                swTimerInterval = null;
+                btn.innerHTML = `<i class="fa-solid fa-play"></i> Resume`;
+                btn.className = "btn-stopwatch btn-sw-start";
+            }
+        }
+
+        function updateStopwatchDisplay() {
+            swElapsedTime = performance.now() - swStartTime;
+            const ms = Math.floor((swElapsedTime % 1000) / 10);
+            const totalSecs = Math.floor(swElapsedTime / 1000);
+            const secs = totalSecs % 60;
+            const mins = Math.floor(totalSecs / 60) % 60;
+            const hrs = Math.floor(totalSecs / 3600);
+
+            const str = `${String(hrs).padStart(2, "0")}:${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}.${String(ms).padStart(2, "0")}`;
+            const digitsEl = document.getElementById("sw-digits");
+            if (digitsEl) digitsEl.textContent = str;
+        }
+
+        function recordStopwatchLap() {
+            if (!swTimerInterval) return;
+            const digits = document.getElementById("sw-digits").textContent;
+            swLaps.unshift({ num: swLaps.length + 1, time: digits });
+
+            const tbody = document.getElementById("sw-laps-body");
+            tbody.innerHTML = swLaps.map(l => `
+                <tr>
+                    <td><strong>#${l.num}</strong></td>
+                    <td class="stat-val">${l.time}</td>
+                    <td style="color:var(--text-muted);">${l.time}</td>
+                </tr>
+            `).join("");
+        }
+
+        function resetStopwatch() {
+            if (swTimerInterval) {
+                clearInterval(swTimerInterval);
+                swTimerInterval = null;
+            }
+            swElapsedTime = 0;
+            swLaps = [];
+            const digits = document.getElementById("sw-digits");
+            if (digits) digits.textContent = "00:00:00.00";
+            const btn = document.getElementById("sw-btn-start");
+            if (btn) {
+                btn.innerHTML = `<i class="fa-solid fa-play"></i> Start`;
+                btn.className = "btn-stopwatch btn-sw-start";
+            }
+            const lapBtn = document.getElementById("sw-btn-lap");
+            if (lapBtn) lapBtn.disabled = true;
+
+            const tbody = document.getElementById("sw-laps-body");
+            if (tbody) tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; color:var(--text-muted);">No laps recorded yet. Press Start and click Lap.</td></tr>`;
+        }
+
+        function clearStopwatchLaps() {
+            swLaps = [];
+            const tbody = document.getElementById("sw-laps-body");
+            if (tbody) tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; color:var(--text-muted);">No laps recorded yet.</td></tr>`;
+            showToast("Laps cleared");
+        }
+
+        /* Canvas Confetti */
+        function triggerConfetti() {
+            const canvas = document.getElementById("confetti-canvas");
+            if (!canvas) return;
+            canvas.style.display = "block";
+            const ctx = canvas.getContext("2d");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const pieces = Array.from({ length: 120 }, () => ({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                size: Math.random() * 8 + 4,
+                color: ["#38bdf8", "#10b981", "#f59e0b", "#ec4899", "#8b5cf6"][Math.floor(Math.random() * 5)],
+                speedY: Math.random() * 3 + 2,
+                speedX: (Math.random() - 0.5) * 2
+            }));
+
+            let frame = 0;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                pieces.forEach(p => {
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(p.x, p.y, p.size, p.size);
+                    p.y += p.speedY;
+                    p.x += p.speedX;
+                });
+                frame++;
+                if (frame < 160) {
+                    requestAnimationFrame(draw);
+                } else {
+                    canvas.style.display = "none";
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        /* ==========================================================================
+           7. Static Pages View (About, Contact, Privacy, Terms)
+           ========================================================================== */
+        function openStatic(pageKey) {
+            navigateTo("static");
+            window.location.hash = pageKey;
+            const slot = document.getElementById("static-page-content");
+            const breadcrumb = document.getElementById("static-breadcrumb-title");
+
+            if (pageKey === "about") {
+                breadcrumb.textContent = "About Velqora";
+                slot.innerHTML = `
+                    <h1>About Velqora Time & Date Hub</h1>
+                    <p>Welcome to <strong>Velqora Info (velqorainfo.vercel.app)</strong> &mdash; the ultimate precision online portal for accurate world time, calendar date calculations, and milestone countdowns.</p>
+                    
+                    <h3>Engineering Standards & Design Philosophy</h3>
+                    <ul>
+                        <li><strong>Inspiration from timeanddate.com:</strong> Modeled after the world's most trusted timekeeping directory with clean data tables, live multi-city clocks, and instant calculation.</li>
+                        <li><strong>16 High-Utility Tools:</strong> Replaced redundant tools with high-traffic utilities like Live World Clock, Time Zone Converter, Date Duration, Exact Age Calculator, and Precision Stopwatch.</li>
+                        <li><strong>100% Client-Side Microsecond Engine:</strong> All time computations run locally in your browser using high-precision native JavaScript APIs &mdash; zero lag and zero private data transmission.</li>
+                        <li><strong>Regional Islamic lunar synchronization:</strong> Customized for Pakistan Standard Time (PKT, UTC+5) with adjustable Hilal moon sighting inputs for Ramadan, Eid ul-Fitr, Eid ul-Adha, and Hajj.</li>
+                    </ul>
+                `;
+            } else if (pageKey === "contact") {
+                breadcrumb.textContent = "Contact & Feedback";
+                slot.innerHTML = `
+                    <h1>Contact Velqora Support</h1>
+                    <p>Have questions, suggestions, or date update requests? Get in touch with our engineering team directly:</p>
+                    
+                    <div style="background:var(--bg-subtle); padding:1.25rem 1.5rem; border-radius:var(--radius-md); border:1px solid var(--border-light); margin:1.5rem 0;">
+                        <p style="margin:0; font-size:1.05rem;">
+                            <i class="fa-solid fa-envelope" style="color:var(--brand-blue); margin-right:0.5rem;"></i>
+                            <strong>Official Support Email:</strong> 
+                            <a href="mailto:misterjojo215@gmail.com" style="color:var(--brand-blue); font-weight:700; margin-left:0.25rem;">misterjojo215@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <form class="form-grid" style="display:grid; gap:1rem; max-width:600px; margin-top:1.5rem;" onsubmit="event.preventDefault(); showToast('Thank you! Message received.'); this.reset();">
+                        <div class="form-group"><label class="form-label">Full Name:</label><input type="text" required class="form-control" placeholder="Aap Ka Naam"></div>
+                        <div class="form-group"><label class="form-label">Email Address:</label><input type="email" required class="form-control" placeholder="misterjojo215@gmail.com"></div>
+                        <div class="form-group"><label class="form-label">Your Message or Feature Suggestion:</label><textarea required rows="4" class="form-control" placeholder="Apna message yahan likhein..."></textarea></div>
+                        <button type="submit" class="form-btn-submit" style="max-width:220px;">Send Feedback</button>
+                    </form>
+                `;
+            } else if (pageKey === "privacy") {
+                breadcrumb.textContent = "Privacy Policy";
+                slot.innerHTML = `
+                    <h1>Privacy Policy</h1>
+                    <p>Velqora Info respects your complete digital privacy. All date calculations, custom countdowns, and age inputs are processed locally on your device without saving private details on remote servers.</p>
+                `;
+            } else if (pageKey === "terms") {
+                breadcrumb.textContent = "Terms of Service";
+                slot.innerHTML = `
+                    <h1>Terms of Service</h1>
+                    <p>All time tools and calculators are provided free of charge for personal, academic, and business planning. Islamic dates are astronomical models subject to physical moon sighting declarations.</p>
+                `;
+            }
+        }
+    </script>
+
+    <script>
+        // Auto-launch this dedicated tool on page load
+        window.addEventListener("DOMContentLoaded", () => {
+            setupToolInterface("weekend");
+        });
+    </script>
+</body>
+</html>

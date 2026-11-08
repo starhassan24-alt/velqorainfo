@@ -1481,6 +1481,9 @@
     <!-- 3. Navigation Bar (timeanddate style tabs) -->
     <nav class="portal-nav-bar">
         <div class="container nav-inner">
+            <a href="#" class="nav-sticky-logo" onclick="navigateTo('home'); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; color:#ffffff; font-weight:800; font-size:1.1rem; text-decoration:none; margin-right:1rem; white-space:nowrap;">
+                <i class="fa-solid fa-hourglass-start" style="color:#38bdf8;"></i> VELQORA
+            </a>
             <ul class="nav-links-list">
                 <li><button class="nav-item-btn active" onclick="filterCategory('all', this)"><i class="fa-solid fa-grid-2"></i> All 16 Tools</button></li>
                 <li><button class="nav-item-btn" onclick="openTool('world-clock')"><i class="fa-solid fa-earth-americas"></i> World Clock</button></li>
@@ -1514,7 +1517,7 @@
         <section class="hero-banner-section">
             <div class="container">
                 <div class="hero-headline">
-                    <h2>The Worldâ€™s Accurate Time, Date & Countdown Portal</h2>
+                    <h2>The World's Accurate Time, Date & Countdown Portal</h2>
                     <p>Access 16 professional-grade timekeeping utilities: Live World Clocks, Time Zone Conversion, Exact Date Durations, Islamic Lunar Projections, and Precision Countdowns.</p>
                 </div>
 
@@ -3280,19 +3283,25 @@
 
         function getWesternZodiac(month, day) {
             const signs = [
-                { sign: "Capricorn â™‘", end: 19 }, { sign: "Aquarius â™’", end: 18 },
-                { sign: "Pisces â™“", end: 20 }, { sign: "Aries â™ˆ", end: 19 },
-                { sign: "Taurus â™‰", end: 20 }, { sign: "Gemini â™Š", end: 20 },
-                { sign: "Cancer â™‹", end: 22 }, { sign: "Leo â™Œ", end: 22 },
-                { sign: "Virgo â™", end: 22 }, { sign: "Libra â™Ž", end: 22 },
-                { sign: "Scorpio â™", end: 21 }, { sign: "Sagittarius â™", end: 21 },
-                { sign: "Capricorn â™‘", end: 31 }
+                { sign: "Capricorn (Dec 22 - Jan 19)", end: 19 },
+                { sign: "Aquarius (Jan 20 - Feb 18)", end: 18 },
+                { sign: "Pisces (Feb 19 - Mar 20)", end: 20 },
+                { sign: "Aries (Mar 21 - Apr 19)", end: 19 },
+                { sign: "Taurus (Apr 20 - May 20)", end: 20 },
+                { sign: "Gemini (May 21 - Jun 20)", end: 20 },
+                { sign: "Cancer (Jun 21 - Jul 22)", end: 22 },
+                { sign: "Leo (Jul 23 - Aug 22)", end: 22 },
+                { sign: "Virgo (Aug 23 - Sep 22)", end: 22 },
+                { sign: "Libra (Sep 23 - Oct 22)", end: 22 },
+                { sign: "Scorpio (Oct 23 - Nov 21)", end: 21 },
+                { sign: "Sagittarius (Nov 22 - Dec 21)", end: 21 },
+                { sign: "Capricorn (Dec 22 - Jan 19)", end: 31 }
             ];
             return day <= signs[month - 1].end ? signs[month - 1].sign : signs[month].sign;
         }
 
         function getChineseZodiac(year) {
-            const animals = ["Rat ðŸ€", "Ox ðŸ‚", "Tiger ðŸ…", "Rabbit ðŸ‡", "Dragon ðŸ‰", "Snake ðŸ", "Horse ðŸŽ", "Goat ðŸ", "Monkey ðŸ’", "Rooster ðŸ“", "Dog ðŸ•", "Pig ðŸ–"];
+            const animals = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
             return animals[(year - 4) % 12];
         }
 
